@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserMicroservice", "UserService\UserMicroservice.csproj", "{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService", "CatalogService\CatalogService.csproj", "{8A40223C-9CAE-49A8-82F4-816439F57F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService\CatalogService.csproj", "{8A40223C-9CAE-49A8-82F4-816439F57F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{9DFF9F68-7835-4C57-B146-2D205009EEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{9DFF9F68-7835-4C57-B146-2D205009EEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{01A962B5-960A-426E-A431-1E980449FBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{01A962B5-960A-426E-A431-1E980449FBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCartService", "ProductCartService\ProductCartService.csproj", "{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCartService", "ProductCartService\ProductCartService.csproj", "{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

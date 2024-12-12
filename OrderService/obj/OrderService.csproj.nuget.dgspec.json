@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj": {}
+    "D:\\marketplace\\microservices\\OrderService\\OrderService.csproj": {}
   },
   "projects": {
-    "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj": {
+    "D:\\marketplace\\microservices\\OrderService\\OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj",
+        "projectUniqueName": "D:\\marketplace\\microservices\\OrderService\\OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj",
+        "projectPath": "D:\\marketplace\\microservices\\OrderService\\OrderService.csproj",
         "packagesPath": "C:\\Users\\ria-2\\.nuget\\packages\\",
-        "outputPath": "D:\\Marketplace\\Microservices\\OrderService\\obj\\",
+        "outputPath": "D:\\marketplace\\microservices\\OrderService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ria-2\\AppData\\Roaming\\NuGet\\NuGet.Config",

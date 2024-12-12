@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Marketplace\\Microservices\\ProductCartService\\ProductCartService.csproj": {}
+    "D:\\marketplace\\microservices\\ProductCartService\\ProductCartService.csproj": {}
   },
   "projects": {
-    "D:\\Marketplace\\Microservices\\ProductCartService\\ProductCartService.csproj": {
+    "D:\\marketplace\\microservices\\ProductCartService\\ProductCartService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Marketplace\\Microservices\\ProductCartService\\ProductCartService.csproj",
+        "projectUniqueName": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartService.csproj",
         "projectName": "ProductCartService",
-        "projectPath": "D:\\Marketplace\\Microservices\\ProductCartService\\ProductCartService.csproj",
+        "projectPath": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartService.csproj",
         "packagesPath": "C:\\Users\\ria-2\\.nuget\\packages\\",
-        "outputPath": "D:\\Marketplace\\Microservices\\ProductCartService\\obj\\",
+        "outputPath": "D:\\marketplace\\microservices\\ProductCartService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ria-2\\AppData\\Roaming\\NuGet\\NuGet.Config",

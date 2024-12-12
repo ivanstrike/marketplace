@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ls9Lcyfzz3zNJ2XFBM7vGy/egowuFkiOCX8/aHDVOlpjShtin8iOWCO8W4NlDFl7UL+l18vaoVydYFrGUDCLDA==",
+  "dgSpecHash": "L2Qb8cRemHDVqU/0s+LDhS6XgGyFwEvpixL6ABfokSIPUkRI6NFNJEuU1tzLylGVGPEjioxznnXP9tpgZo3bQQ==",
   "success": true,
-  "projectFilePath": "D:\\Marketplace\\Microservices\\ProductCartService\\ProductCartService.csproj",
+  "projectFilePath": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

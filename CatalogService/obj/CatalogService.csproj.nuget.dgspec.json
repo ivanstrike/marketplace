@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Marketplace\\Microservices\\CatalogService\\CatalogService.csproj": {}
+    "D:\\marketplace\\microservices\\CatalogService\\CatalogService.csproj": {}
   },
   "projects": {
-    "D:\\Marketplace\\Microservices\\CatalogService\\CatalogService.csproj": {
+    "D:\\marketplace\\microservices\\CatalogService\\CatalogService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Marketplace\\Microservices\\CatalogService\\CatalogService.csproj",
+        "projectUniqueName": "D:\\marketplace\\microservices\\CatalogService\\CatalogService.csproj",
         "projectName": "CatalogService",
-        "projectPath": "D:\\Marketplace\\Microservices\\CatalogService\\CatalogService.csproj",
+        "projectPath": "D:\\marketplace\\microservices\\CatalogService\\CatalogService.csproj",
         "packagesPath": "C:\\Users\\ria-2\\.nuget\\packages\\",
-        "outputPath": "D:\\Marketplace\\Microservices\\CatalogService\\obj\\",
+        "outputPath": "D:\\marketplace\\microservices\\CatalogService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ria-2\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Marketplace\\Microservices\\ApiGateway\\ApiGateway.csproj": {}
+    "D:\\marketplace\\microservices\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "D:\\Marketplace\\Microservices\\ApiGateway\\ApiGateway.csproj": {
+    "D:\\marketplace\\microservices\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Marketplace\\Microservices\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "D:\\marketplace\\microservices\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "D:\\Marketplace\\Microservices\\ApiGateway\\ApiGateway.csproj",
+        "projectPath": "D:\\marketplace\\microservices\\ApiGateway\\ApiGateway.csproj",
         "packagesPath": "C:\\Users\\ria-2\\.nuget\\packages\\",
-        "outputPath": "D:\\Marketplace\\Microservices\\ApiGateway\\obj\\",
+        "outputPath": "D:\\marketplace\\microservices\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ria-2\\AppData\\Roaming\\NuGet\\NuGet.Config",
