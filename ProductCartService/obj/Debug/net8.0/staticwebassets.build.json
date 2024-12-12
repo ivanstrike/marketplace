@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "DbIBs/7RwQsBksa7DieQQPva7F4Cro8kpLvH1zk7UGI=",
-  "Source": "ProductCartService",
-  "BasePath": "_content/ProductCartService",
+  "Hash": "JM5nipGuVwHram+z96l+nXaWTn5/aMh9dk/GKhvCrXk=",
+  "Source": "ProductCartMicroservice",
+  "BasePath": "_content/ProductCartMicroservice",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

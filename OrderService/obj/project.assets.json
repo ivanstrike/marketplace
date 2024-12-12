@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj",
-      "projectName": "OrderService",
-      "projectPath": "D:\\Marketplace\\Microservices\\OrderService\\OrderService.csproj",
+      "projectUniqueName": "D:\\marketplace\\microservices\\OrderService\\OrderMicroservice.csproj",
+      "projectName": "OrderMicroservice",
+      "projectPath": "D:\\marketplace\\microservices\\OrderService\\OrderMicroservice.csproj",
       "packagesPath": "C:\\Users\\ria-2\\.nuget\\packages\\",
-      "outputPath": "D:\\Marketplace\\Microservices\\OrderService\\obj\\",
+      "outputPath": "D:\\marketplace\\microservices\\OrderService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ria-2\\AppData\\Roaming\\NuGet\\NuGet.Config",

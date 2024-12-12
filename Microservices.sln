@@ -5,13 +5,13 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserMicroservice", "UserService\UserMicroservice.csproj", "{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService\CatalogService.csproj", "{8A40223C-9CAE-49A8-82F4-816439F57F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogMicroservice", "CatalogService\CatalogMicroservice.csproj", "{8A40223C-9CAE-49A8-82F4-816439F57F6B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{9DFF9F68-7835-4C57-B146-2D205009EEBE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{01A962B5-960A-426E-A431-1E980449FBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderMicroservice", "OrderService\OrderMicroservice.csproj", "{01A962B5-960A-426E-A431-1E980449FBC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCartService", "ProductCartService\ProductCartService.csproj", "{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCartMicroservice", "ProductCartService\ProductCartMicroservice.csproj", "{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

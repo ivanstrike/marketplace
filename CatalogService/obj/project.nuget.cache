@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zM+zh49y4iAYuzJG9dIJRnR+RmiV0GZJaPZ0TMSsKneWxwCqc+GDIzP6gY4K0b9//Z8DBnCWPzfLB++BTYPWcQ==",
+  "dgSpecHash": "WzDj3goNYr0mRqj92zymfT8zFFwoW3RLdoKSVI8zxismJyi2hdMi3jPyxJ1suPzv3G3D4IrgTxYkJ6anDdd0Mg==",
   "success": true,
-  "projectFilePath": "D:\\marketplace\\microservices\\CatalogService\\CatalogService.csproj",
+  "projectFilePath": "D:\\marketplace\\microservices\\CatalogService\\CatalogMicroservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

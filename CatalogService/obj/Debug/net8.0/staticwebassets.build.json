@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "b7+XaXr3WxIJ89hcjAAPMqo1T+YYQjHxxIihGOoNox8=",
-  "Source": "CatalogService",
-  "BasePath": "_content/CatalogService",
+  "Hash": "KlEZZlWIuXg8ooOuL6YvedElnl7UTn4qB6NK3pJYixs=",
+  "Source": "CatalogMicroservice",
+  "BasePath": "_content/CatalogMicroservice",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
