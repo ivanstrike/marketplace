@@ -6,15 +6,15 @@ using ProductCartMicroservice.Services;
 using ProductCartMicroservice.Model;
 using ProductCartMicroservice.RabbitMQ.Events;
 
-public class RabbitMqConsumer
+public class RabbitMqConsumer : IDisposable
 {
-    private readonly ICartService _cartService;
+    private readonly IServiceProvider _serviceProvider;
     private readonly IConnection _connection;
     private readonly IModel _channel;
 
-    public RabbitMqConsumer(ICartService productCartService)
+    public RabbitMqConsumer(IServiceProvider serviceProvider)
     {
-        _cartService = productCartService;
+        _serviceProvider = serviceProvider;
 
         var factory = new ConnectionFactory { HostName = "localhost" };
         _connection = factory.CreateConnection();
@@ -27,17 +27,22 @@ public class RabbitMqConsumer
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += async (model, ea) =>
         {
-            var body = ea.Body.ToArray();
-            var message = Encoding.UTF8.GetString(body);
-            var userCreatedEvent = JsonSerializer.Deserialize<UserCreatedEvent>(message);
-
-            if (userCreatedEvent != null)
+            using (var scope = _serviceProvider.CreateScope())
             {
-                await _cartService.CreateCartAsync(new Cart
+                var cartService = scope.ServiceProvider.GetRequiredService<ICartService>();
+
+                var body = ea.Body.ToArray();
+                var message = Encoding.UTF8.GetString(body);
+                var userCreatedEvent = JsonSerializer.Deserialize<UserCreatedEvent>(message);
+
+                if (userCreatedEvent != null)
                 {
-                    UserId = userCreatedEvent.UserId,
-                    Items = new List<CartItem>()
-                });
+                    await cartService.CreateCartAsync(new Cart
+                    {
+                        UserId = userCreatedEvent.UserId,
+                        Items = new List<CartItem>()
+                    });
+                }
             }
         };
 
@@ -50,5 +55,3 @@ public class RabbitMqConsumer
         _connection?.Dispose();
     }
 }
-
-
