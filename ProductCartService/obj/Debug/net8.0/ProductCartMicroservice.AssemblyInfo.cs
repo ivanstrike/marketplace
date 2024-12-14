@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("40bbdb2a-352e-4241-99ac-fe83131bdbcc")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ee9d0b1c62a7243e10f2432dc1a45c68c12c7b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64a7005d530c5d62fa35ebe6e7a47968de5fa6be")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

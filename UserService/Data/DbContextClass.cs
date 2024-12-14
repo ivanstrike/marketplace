@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MicroService.Model;
+using UserMicroservice.Model;
 
-namespace MicroService.Data
+namespace UserMicroservice.Data
 {
     public class DbContextClass: DbContext
     {

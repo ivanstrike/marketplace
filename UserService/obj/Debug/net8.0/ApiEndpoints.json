@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MicroService.Model.User",
+        "Type": "UserMicroservice.Model.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -41,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MicroService.Model.User",
+        "Type": "UserMicroservice.Model.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -66,13 +66,13 @@
       },
       {
         "Name": "updatedUser",
-        "Type": "MicroService.Model.UpdateUserDTO",
+        "Type": "UserMicroservice.Model.UpdateUserDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "MicroService.Model.User",
+        "Type": "UserMicroservice.Model.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -108,7 +108,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MicroService.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

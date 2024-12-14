@@ -1,4 +1,4 @@
-﻿namespace MicroService.Model
+﻿namespace UserMicroservice.Model
 {
     public class User
     {

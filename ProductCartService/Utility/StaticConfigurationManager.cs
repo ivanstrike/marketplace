@@ -1,4 +1,4 @@
-﻿namespace UserMicroservice.Utility
+﻿namespace ProductCartMicroservice.Utility
 {
     static class StaticConfigurationManager
     {

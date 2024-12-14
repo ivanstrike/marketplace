@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fpgK8eq63BS7KrOOcoE9D9nrSYx+N7rw9khEv/nnmMUQAeLB+OjVR3II3++Ly5zVJFibZHcxgdk/+Ri+fNO8XQ==",
+  "dgSpecHash": "0h2VpYR7YxlP0GJjIUVlBAa+lyj3VYzuII6F3fgBUTGNk1kvay14scueSPobq7K9mLy5FR39AfcYVaQPLo/seA==",
   "success": true,
   "projectFilePath": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartMicroservice.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.extensions.options\\9.0.0\\microsoft.extensions.options.9.0.0.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0\\microsoft.extensions.primitives.9.0.0.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ria-2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512",
     "C:\\Users\\ria-2\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.2\\npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512",

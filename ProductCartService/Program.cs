@@ -1,5 +1,6 @@
 using ProductCartMicroservice.Data;
 using ProductCartMicroservice.Services;
+using ProductCartMicroservice.Utility;
 using Serilog;
 using UserMicroservice.Middleware;
 
@@ -11,8 +12,10 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 builder.Host.UseSerilog();
-builder.Services.AddSingleton<RabbitMqConsumer>();
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddSingleton<RabbitMqConsumer>();
+builder.Services.AddHostedService<RabbitMqConsumerBackgroundService>();
 
 builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddControllers();
@@ -29,7 +32,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-var rabbitMqConsumer = app.Services.GetRequiredService<RabbitMqConsumer>();
 
 app.UseHttpsRedirection();
 

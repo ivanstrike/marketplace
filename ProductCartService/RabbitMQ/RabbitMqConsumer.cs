@@ -5,21 +5,33 @@ using System.Text.Json;
 using ProductCartMicroservice.Services;
 using ProductCartMicroservice.Model;
 using ProductCartMicroservice.RabbitMQ.Events;
+using ProductCartMicroservice.Utility;
+using Microsoft.Extensions.Options;
 
 public class RabbitMqConsumer : IDisposable
 {
+    
+    private readonly RabbitMqSettings _rabbitMqSettings;
     private readonly IServiceProvider _serviceProvider;
     private readonly IConnection _connection;
     private readonly IModel _channel;
 
-    public RabbitMqConsumer(IServiceProvider serviceProvider)
+    public RabbitMqConsumer(IServiceProvider serviceProvider, IOptions<RabbitMqSettings> options)
     {
         _serviceProvider = serviceProvider;
+        _rabbitMqSettings = options.Value;
 
-        var factory = new ConnectionFactory { HostName = "localhost" };
+        var factory = new ConnectionFactory
+        {
+            HostName = _rabbitMqSettings.Host,
+            Port = _rabbitMqSettings.Port,
+            UserName = _rabbitMqSettings.Username,
+            Password = _rabbitMqSettings.Password
+        };
         _connection = factory.CreateConnection();
         _channel = _connection.CreateModel();
 
+        // Exchange and queue setup
         _channel.ExchangeDeclare(exchange: "user.exchange", type: ExchangeType.Topic);
         var queueName = _channel.QueueDeclare().QueueName;
         _channel.QueueBind(queue: queueName, exchange: "user.exchange", routingKey: "user.created");
@@ -37,16 +49,39 @@ public class RabbitMqConsumer : IDisposable
 
                 if (userCreatedEvent != null)
                 {
-                    await cartService.CreateCartAsync(new Cart
+                    var cart = await cartService.CreateCartAsync(new Cart
                     {
                         UserId = userCreatedEvent.UserId,
                         Items = new List<CartItem>()
                     });
+
+                    // Publish CartCreatedEvent back to RabbitMQ
+                    var cartCreatedEvent = new CartCreatedEvent
+                    {
+                        UserId = userCreatedEvent.UserId,
+                        CartId = cart.Id
+                    };
+
+                    PublishCartCreatedEvent(cartCreatedEvent);
                 }
             }
         };
 
         _channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+        
+    }
+
+    private void PublishCartCreatedEvent(CartCreatedEvent cartCreatedEvent)
+    {
+        var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(cartCreatedEvent));
+
+        _channel.BasicPublish(
+            exchange: "cart.exchange",
+            routingKey: "cart.created",
+            basicProperties: null,
+            body: body);
+
+        
     }
 
     public void Dispose()

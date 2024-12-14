@@ -1,8 +1,9 @@
-using MicroService.Data;
-using MicroService.Services;
+using UserMicroservice.Data;
+using UserMicroservice.Services;
 using Serilog;
 using UserMicroservice.Middleware;
 using UserMicroservice.RabbitMQ;
+using UserMicroservice.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +14,14 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 builder.Host.UseSerilog();
 
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
+
 builder.Services.AddSingleton<RabbitMqPublisher>();
 builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddSingleton<RabbitMqConsumer>();
+builder.Services.AddHostedService<RabbitMqConsumerBackgroundService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -1,7 +1,6 @@
-﻿using MicroService.Model;
-using UserMicroservice.Model;
+﻿using UserMicroservice.Model;
 
-namespace MicroService.Services
+namespace UserMicroservice.Services
 {
     public interface IUserService
     {
@@ -9,6 +8,7 @@ namespace MicroService.Services
         Task<User?> GetUserByIdAsync(Guid id); 
         Task<User> CreateUserAsync(CreateUserDTO user);
         Task<User?> UpdateUserAsync(Guid id, UpdateUserDTO updatedUser);
+        Task<User?> UpdateProductCartIdAsync (Guid id, Guid productcartId);
         Task<bool> DeleteUserAsync(Guid id);
     }
 }

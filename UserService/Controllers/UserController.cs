@@ -1,8 +1,7 @@
-﻿using MicroService.Data;
-using MicroService.Model;
-using MicroService.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using UserMicroservice.Data;
 using UserMicroservice.Model;
+using UserMicroservice.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace UserMicroservice.Controllers
 {

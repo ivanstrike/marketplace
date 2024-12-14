@@ -1,17 +1,27 @@
 ﻿using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Options;
+using UserMicroservice.Utility;
 using RabbitMQ.Client;
+using UserMicroservice.Utility;
 
 namespace UserMicroservice.RabbitMQ
 {
-    public class RabbitMqPublisher
+    public class RabbitMqPublisher : IDisposable
     {
         private readonly IConnection _connection;
         private readonly IModel _channel;
-
-        public RabbitMqPublisher()
+        private readonly RabbitMqSettings _rabbitMqSettings;
+        public RabbitMqPublisher(IOptions<RabbitMqSettings> options)
         {
-            var factory = new ConnectionFactory { HostName = "localhost" }; // Укажите ваш хост
+            _rabbitMqSettings = options.Value;
+            var factory = new ConnectionFactory
+            {
+                HostName = _rabbitMqSettings.Host,
+                Port = _rabbitMqSettings.Port,
+                UserName = _rabbitMqSettings.Username,
+                Password = _rabbitMqSettings.Password
+            };
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
         }

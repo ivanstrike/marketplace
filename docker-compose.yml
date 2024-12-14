@@ -1,0 +1,66 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" 
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  postgres-user:
+    image: postgres:15
+    container_name: postgres-user
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: userdb
+      POSTGRES_PASSWORD: userdbpassword
+      POSTGRES_DB: userdb
+    volumes:
+      - user_data:/var/lib/postgresql/data
+
+  postgres-cart:
+    image: postgres:15
+    container_name: postgres-cart
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: cartdb
+      POSTGRES_PASSWORD: cartdbpassword
+      POSTGRES_DB: cartdb
+    volumes:
+      - cart_data:/var/lib/postgresql/data
+
+  user-service:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "5000:80"
+    environment:
+      ConnectionStrings__Database: "Host=postgres-user;Port=5432;Database=userdb;Username=userdb;Password=userdbpassword"
+      RabbitMq__Host: "rabbitmq"
+    depends_on:
+      - postgres-user
+      - rabbitmq
+
+  cart-service:
+    build:
+      context: ./ProductCartService
+      dockerfile: Dockerfile
+    container_name: cart-service
+    ports:
+      - "5001:80"
+    environment:
+      ConnectionStrings__Database: "Host=postgres-cart;Port=5432;Database=cartdb;Username=cartdb;Password=cartdbpassword"
+      RabbitMq__Host: "rabbitmq"
+    depends_on:
+      - postgres-cart
+      - rabbitmq
+
+volumes:
+  user_data:
+  cart_data:

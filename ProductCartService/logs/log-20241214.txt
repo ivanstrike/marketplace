@@ -67,3 +67,29 @@
 2024-12-14 01:09:00.725 +03:00 [INF] Executed action ProductCartMicroservice.Controllers.CartController.GetCartsAsync (ProductCartMicroservice) in 1094.0905ms
 2024-12-14 01:09:00.727 +03:00 [INF] Executed endpoint 'ProductCartMicroservice.Controllers.CartController.GetCartsAsync (ProductCartMicroservice)'
 2024-12-14 01:09:00.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/api/Cart/list - 200 null application/json; charset=utf-8 1144.6039ms
+2024-12-14 12:34:03.021 +03:00 [INF] Now listening on: https://localhost:7056
+2024-12-14 12:34:03.059 +03:00 [INF] Now listening on: http://localhost:5202
+2024-12-14 12:34:03.153 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-14 12:34:03.154 +03:00 [INF] Hosting environment: Development
+2024-12-14 12:34:03.155 +03:00 [INF] Content root path: D:\marketplace\microservices\ProductCartService
+2024-12-14 12:34:03.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/swagger/index.html - null null
+2024-12-14 12:34:04.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/swagger/index.html - 200 null text/html;charset=utf-8 216.3224ms
+2024-12-14 12:34:04.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-14 12:34:04.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/_vs/browserLink - null null
+2024-12-14 12:34:04.167 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 8.2935ms
+2024-12-14 12:34:04.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.7888ms
+2024-12-14 12:34:04.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/swagger/v1/swagger.json - null null
+2024-12-14 12:34:04.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.6708ms
+2024-12-14 13:10:57.664 +03:00 [INF] Now listening on: https://localhost:7056
+2024-12-14 13:10:57.742 +03:00 [INF] Now listening on: http://localhost:5202
+2024-12-14 13:10:57.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-14 13:10:57.961 +03:00 [INF] Hosting environment: Development
+2024-12-14 13:10:57.964 +03:00 [INF] Content root path: D:\marketplace\microservices\ProductCartService
+2024-12-14 13:10:58.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/swagger/index.html - null null
+2024-12-14 13:10:58.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/swagger/index.html - 200 null text/html;charset=utf-8 177.0638ms
+2024-12-14 13:10:58.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-14 13:10:58.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/_vs/browserLink - null null
+2024-12-14 13:10:58.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 8.6813ms
+2024-12-14 13:10:58.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.7669ms
+2024-12-14 13:10:58.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7056/swagger/v1/swagger.json - null null
+2024-12-14 13:10:58.707 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7056/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.7143ms

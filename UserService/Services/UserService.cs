@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MicroService.Model;
-using MicroService.Data;
+using UserMicroservice.Model;
+using UserMicroservice.Data;
 using UserMicroservice.RabbitMQ;
 using UserMicroservice.Model;
 using Microsoft.AspNetCore.Identity;
 using BCrypt.Net;
 
-namespace MicroService.Services
+namespace UserMicroservice.Services
 {
     public class UserService : IUserService
     {
@@ -67,6 +67,17 @@ namespace MicroService.Services
             user.Name = updatedUser.Name;
             user.Email = updatedUser.Email;
 
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task<User?> UpdateProductCartIdAsync(Guid id, Guid productcartId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null) return null;
+
+            user.ProductCartId = productcartId;
+          
             await _context.SaveChangesAsync();
             return user;
         }

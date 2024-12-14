@@ -17,6 +17,7 @@ namespace ProductCartMicroservice.Services
         Task<Cart?> GetCartByUserIdAsync(Guid userId);
 
         Task<bool> ClearCartAsync(Guid id);
+
     }
 }
 
