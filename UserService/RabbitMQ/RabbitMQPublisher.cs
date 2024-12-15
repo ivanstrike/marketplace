@@ -23,18 +23,31 @@ namespace UserMicroservice.RabbitMQ
                 Password = _rabbitMqSettings.Password
             };
             _connection = factory.CreateConnection();
+            if (!_connection.IsOpen)
+            {
+                throw new InvalidOperationException("RabbitMQ connection is not open.");
+            }
             _channel = _connection.CreateModel();
         }
 
         public Task PublishMessageAsync(string queueName, object message)
         {
-            _channel.QueueDeclare(queueName, durable: true, exclusive: false, autoDelete: false);
+            
+            _channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
 
+           
+            var properties = _channel.CreateBasicProperties();
+            properties.Persistent = true;
+
+           
             var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
-            _channel.BasicPublish(exchange: "", routingKey: queueName, basicProperties: null, body: body);
+
+        
+            _channel.BasicPublish(exchange: "user.exchange", routingKey: queueName, basicProperties: properties, body: body);
 
             return Task.CompletedTask;
         }
+
 
         public void Dispose()
         {

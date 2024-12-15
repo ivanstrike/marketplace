@@ -1,0 +1,369 @@
+2024-12-15 15:38:47.308 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 15:38:47.349 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 15:38:47.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 15:38:47.435 +03:00 [INF] Hosting environment: Development
+2024-12-15 15:38:47.436 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 15:38:48.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 15:38:48.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 218.0943ms
+2024-12-15 15:38:48.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 15:38:48.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 15:38:48.696 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 16.8514ms
+2024-12-15 15:38:48.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.6404ms
+2024-12-15 15:38:48.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 15:38:49.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.2156ms
+2024-12-15 15:40:15.482 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 15:40:15.573 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 15:40:15.874 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 15:40:15.881 +03:00 [INF] Hosting environment: Development
+2024-12-15 15:40:15.883 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 15:40:15.982 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 15:40:16.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 289.8374ms
+2024-12-15 15:40:16.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 15:40:16.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 15:40:16.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 15.8663ms
+2024-12-15 15:40:16.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.5109ms
+2024-12-15 15:40:16.814 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 15:40:16.965 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 151.2653ms
+2024-12-15 15:40:46.494 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 71
+2024-12-15 15:40:46.520 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 15:40:46.590 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 15:40:47.114 +03:00 [INF] Creating a new user with email strinолg
+2024-12-15 15:40:50.728 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 15:40:50.748 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 4149.951ms
+2024-12-15 15:40:50.750 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 15:40:50.761 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 4267.108ms
+2024-12-15 15:41:02.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 15:41:02.416 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 15:41:02.433 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 15:41:02.445 +03:00 [INF] Fetching the list of users.
+2024-12-15 15:41:02.515 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 15:41:02.521 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 83.4364ms
+2024-12-15 15:41:02.525 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 15:41:02.528 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 121.6305ms
+2024-12-15 15:54:14.222 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 15:54:14.271 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 15:54:14.398 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 15:54:14.400 +03:00 [INF] Hosting environment: Development
+2024-12-15 15:54:14.401 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 15:54:14.703 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 15:54:14.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 155.5517ms
+2024-12-15 15:54:14.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 15:54:14.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 8.1192ms
+2024-12-15 15:54:14.900 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 15:54:14.949 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.7154ms
+2024-12-15 15:54:15.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 15:54:15.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.4462ms
+2024-12-15 15:54:24.899 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 70
+2024-12-15 15:54:24.914 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 15:54:24.972 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 15:54:25.168 +03:00 [INF] Creating a new user with email string123
+2024-12-15 15:54:27.779 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 15:54:27.799 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 2820.1365ms
+2024-12-15 15:54:27.802 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 15:54:27.816 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 2918.4392ms
+2024-12-15 16:06:45.261 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 16:06:45.330 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 16:06:45.566 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 16:06:45.569 +03:00 [INF] Hosting environment: Development
+2024-12-15 16:06:45.570 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 16:06:45.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 16:06:45.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 259.238ms
+2024-12-15 16:06:46.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 16:06:46.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 16:06:46.048 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 20.2596ms
+2024-12-15 16:06:46.090 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.1915ms
+2024-12-15 16:06:46.339 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 16:06:46.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.5351ms
+2024-12-15 16:07:02.313 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 70
+2024-12-15 16:07:02.332 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:07:02.376 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 16:07:02.612 +03:00 [INF] Creating a new user with email 123string
+2024-12-15 16:07:05.186 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 2801.2714ms
+2024-12-15 16:07:05.189 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:07:05.316 +03:00 [ERR] An unhandled exception occurred.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=406, text='PRECONDITION_FAILED - inequivalent arg 'x-dead-letter-exchange' for queue 'user_created_queue' in vhost '/': received none but current is the value 'dead_letter_exchange' of type 'longstr'', classId=50, methodId=10
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.QueueDeclare(String queue, Boolean passive, Boolean durable, Boolean exclusive, Boolean autoDelete, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.ModelBase.QueueDeclare(String queue, Boolean durable, Boolean exclusive, Boolean autoDelete, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.QueueDeclare(String queue, Boolean durable, Boolean exclusive, Boolean autoDelete, IDictionary`2 arguments)
+   at RabbitMQ.Client.IModelExensions.QueueDeclare(IModel model, String queue, Boolean durable, Boolean exclusive, Boolean autoDelete, IDictionary`2 arguments)
+   at UserMicroservice.RabbitMQ.RabbitMqPublisher.PublishMessageAsync(String queueName, Object message) in D:\marketplace\microservices\UserService\RabbitMQ\RabbitMQPublisher.cs:line 36
+   at UserMicroservice.Services.UserService.CreateUserAsync(CreateUserDTO userdto) in D:\marketplace\microservices\UserService\Services\UserService.cs:line 52
+   at UserMicroservice.Controllers.UserController.AddUserAsync(CreateUserDTO user) in D:\marketplace\microservices\UserService\Controllers\UserController.cs:line 52
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UserMicroservice.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\marketplace\microservices\UserService\Middleware\ExceptionHandlingMiddleware.cs:line 21
+2024-12-15 16:07:05.444 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 500 null application/json 3130.4478ms
+2024-12-15 16:17:32.618 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 16:17:32.707 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 16:17:32.992 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 16:17:32.994 +03:00 [INF] Hosting environment: Development
+2024-12-15 16:17:32.996 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 16:17:33.488 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 16:17:33.712 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 233.4058ms
+2024-12-15 16:17:33.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 16:17:33.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 16:17:33.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 13.7664ms
+2024-12-15 16:17:33.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9873ms
+2024-12-15 16:17:34.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 16:17:34.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.6098ms
+2024-12-15 16:17:52.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 16:17:52.874 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 16:17:52.913 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 16:17:53.070 +03:00 [INF] Fetching the list of users.
+2024-12-15 16:17:54.742 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 16:17:54.775 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 1851.8129ms
+2024-12-15 16:17:54.777 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 16:17:54.796 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 1945.0571ms
+2024-12-15 16:18:37.436 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 70
+2024-12-15 16:18:37.442 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:18:37.461 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 16:18:37.531 +03:00 [INF] Creating a new user with email 123string
+2024-12-15 16:18:37.802 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 337.2546ms
+2024-12-15 16:18:37.804 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:18:37.884 +03:00 [ERR] An unhandled exception occurred.
+System.InvalidOperationException: Пользователь с таким email уже существует.
+   at UserMicroservice.Services.UserService.CreateUserAsync(CreateUserDTO userdto) in D:\marketplace\microservices\UserService\Services\UserService.cs:line 41
+   at UserMicroservice.Controllers.UserController.AddUserAsync(CreateUserDTO user) in D:\marketplace\microservices\UserService\Controllers\UserController.cs:line 52
+   at lambda_method53(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UserMicroservice.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\marketplace\microservices\UserService\Middleware\ExceptionHandlingMiddleware.cs:line 21
+2024-12-15 16:18:37.973 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 400 null application/json 537.6641ms
+2024-12-15 16:18:44.910 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 69
+2024-12-15 16:18:44.916 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:18:44.919 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 16:18:44.931 +03:00 [INF] Creating a new user with email 12string
+2024-12-15 16:18:45.676 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 16:18:45.680 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 757.8984ms
+2024-12-15 16:18:45.685 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:18:45.687 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 776.8885ms
+2024-12-15 16:33:48.899 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 16:33:48.946 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 16:33:49.091 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 16:33:49.093 +03:00 [INF] Hosting environment: Development
+2024-12-15 16:33:49.094 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 16:33:49.460 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 16:33:49.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 174.2498ms
+2024-12-15 16:33:49.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 16:33:49.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 16:33:49.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 10.155ms
+2024-12-15 16:33:49.762 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.7288ms
+2024-12-15 16:33:50.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 16:33:50.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.6122ms
+2024-12-15 16:33:58.140 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 69
+2024-12-15 16:33:58.164 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:33:58.215 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 16:33:58.420 +03:00 [INF] Creating a new user with email str13ing
+2024-12-15 16:34:00.875 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 16:34:00.893 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 2669.0652ms
+2024-12-15 16:34:00.895 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 16:34:00.906 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 2766.6986ms
+2024-12-15 17:37:52.920 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 17:37:52.968 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 17:37:53.122 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 17:37:53.125 +03:00 [INF] Hosting environment: Development
+2024-12-15 17:37:53.126 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 17:37:53.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 17:37:53.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 163.3428ms
+2024-12-15 17:37:53.617 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 17:37:53.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 17:37:53.631 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 14.072ms
+2024-12-15 17:37:53.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.4132ms
+2024-12-15 17:37:53.966 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 17:37:54.057 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.6226ms
+2024-12-15 17:38:18.540 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 64
+2024-12-15 17:38:18.551 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:38:18.579 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 17:38:18.811 +03:00 [INF] Creating a new user with email 123
+2024-12-15 17:38:20.745 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 17:38:20.759 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 2174.6196ms
+2024-12-15 17:38:20.760 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:38:20.766 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 2226.6554ms
+2024-12-15 17:43:58.389 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 17:43:58.467 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 17:43:58.579 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 17:43:58.581 +03:00 [INF] Hosting environment: Development
+2024-12-15 17:43:58.582 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 17:43:59.071 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 17:43:59.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 148.4834ms
+2024-12-15 17:43:59.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 17:43:59.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 17:43:59.267 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 6.5207ms
+2024-12-15 17:43:59.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.0708ms
+2024-12-15 17:43:59.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 17:43:59.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.6451ms
+2024-12-15 17:44:10.920 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 64
+2024-12-15 17:44:10.928 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:44:10.955 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 17:44:11.103 +03:00 [INF] Creating a new user with email str
+2024-12-15 17:44:12.490 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 17:44:12.503 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 1542.0564ms
+2024-12-15 17:44:12.505 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:44:12.511 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 1591.3835ms
+2024-12-15 17:45:54.350 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 17:45:54.470 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 17:45:54.758 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 17:45:54.768 +03:00 [INF] Hosting environment: Development
+2024-12-15 17:45:54.775 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 17:45:54.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 17:45:55.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 286.75ms
+2024-12-15 17:45:55.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 17:45:55.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 17:45:55.200 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 16.5621ms
+2024-12-15 17:45:55.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.3681ms
+2024-12-15 17:45:55.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 17:45:55.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.0397ms
+2024-12-15 17:45:58.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 17:45:58.228 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 17:45:58.249 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 17:45:58.377 +03:00 [INF] Fetching the list of users.
+2024-12-15 17:45:59.477 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 17:45:59.496 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 1241.5393ms
+2024-12-15 17:45:59.498 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 17:45:59.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 1288.6019ms
+2024-12-15 17:56:21.472 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 17:56:21.521 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 17:56:21.654 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 17:56:21.656 +03:00 [INF] Hosting environment: Development
+2024-12-15 17:56:21.657 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 17:56:22.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 17:56:22.331 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 175.5804ms
+2024-12-15 17:56:22.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 17:56:22.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 17:56:22.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 7.2134ms
+2024-12-15 17:56:22.418 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.4138ms
+2024-12-15 17:56:22.602 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 17:56:22.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.2067ms
+2024-12-15 17:56:40.432 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 64
+2024-12-15 17:56:40.443 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:56:40.467 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 17:56:40.564 +03:00 [INF] Creating a new user with email 321
+2024-12-15 17:56:41.933 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 17:56:41.947 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 1472.7851ms
+2024-12-15 17:56:41.949 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 17:56:41.958 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 1525.4544ms
+2024-12-15 17:58:42.452 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 17:58:42.522 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 17:58:42.692 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 17:58:42.694 +03:00 [INF] Hosting environment: Development
+2024-12-15 17:58:42.696 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 17:58:43.115 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 17:58:43.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 223.825ms
+2024-12-15 17:58:43.391 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 17:58:43.393 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 17:58:43.402 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 10.5453ms
+2024-12-15 17:58:43.447 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.4562ms
+2024-12-15 17:58:43.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 17:58:43.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 159.9778ms
+2024-12-15 17:58:48.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 17:58:48.629 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 17:58:48.657 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 17:58:48.743 +03:00 [INF] Fetching the list of users.
+2024-12-15 17:58:50.106 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 17:58:50.137 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 1474.0948ms
+2024-12-15 17:58:50.139 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 17:58:50.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 1540.2199ms
+2024-12-15 18:15:30.394 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 18:15:30.468 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 18:15:30.605 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 18:15:30.606 +03:00 [INF] Hosting environment: Development
+2024-12-15 18:15:30.607 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 18:15:31.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 18:15:31.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 160.5497ms
+2024-12-15 18:15:31.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 18:15:31.261 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 18:15:31.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 7.7896ms
+2024-12-15 18:15:31.313 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.7169ms
+2024-12-15 18:15:31.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 18:15:31.605 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.111ms
+2024-12-15 18:15:34.090 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 18:15:34.099 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 18:15:34.119 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 18:15:34.191 +03:00 [INF] Fetching the list of users.
+2024-12-15 18:15:35.120 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 18:15:35.143 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 1018.5269ms
+2024-12-15 18:15:35.144 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 18:15:35.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 1065.8074ms
+2024-12-15 18:37:37.746 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 18:37:37.844 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 18:37:37.955 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 18:37:37.957 +03:00 [INF] Hosting environment: Development
+2024-12-15 18:37:37.958 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 18:37:38.351 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 18:37:38.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 166.3827ms
+2024-12-15 18:37:38.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 18:37:38.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 18:37:38.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 8.2486ms
+2024-12-15 18:37:38.604 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.4178ms
+2024-12-15 18:37:38.797 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 18:37:38.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.2569ms
+2024-12-15 18:38:00.898 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 64
+2024-12-15 18:38:00.907 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 18:38:00.936 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 18:38:01.050 +03:00 [INF] Creating a new user with email 456
+2024-12-15 18:38:02.470 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 18:38:02.490 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 1547.9272ms
+2024-12-15 18:38:02.492 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 18:38:02.504 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 1609.2684ms
+2024-12-15 19:33:01.357 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 19:33:01.473 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 19:33:01.654 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 19:33:01.657 +03:00 [INF] Hosting environment: Development
+2024-12-15 19:33:01.665 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 19:33:02.122 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 19:33:02.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 189.2654ms
+2024-12-15 19:33:02.330 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 19:33:02.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 8.2783ms
+2024-12-15 19:33:02.341 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 19:33:02.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.3196ms
+2024-12-15 19:33:02.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 19:33:02.762 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.6866ms
+2024-12-15 19:33:16.047 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7225/api/User - application/json 69
+2024-12-15 19:33:16.056 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 19:33:16.080 +03:00 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserMicroservice.Model.User]] AddUserAsync(UserMicroservice.Model.CreateUserDTO) on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 19:33:16.112 +03:00 [INF] Creating a new user with email strin45g
+2024-12-15 19:33:16.489 +03:00 [INF] Executing CreatedResult, writing value of type 'UserMicroservice.Model.User'.
+2024-12-15 19:33:16.501 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice) in 415.3406ms
+2024-12-15 19:33:16.504 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.AddUserAsync (UserMicroservice)'
+2024-12-15 19:33:16.510 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7225/api/User - 201 null application/json; charset=utf-8 462.911ms
+2024-12-15 19:34:12.970 +03:00 [INF] Now listening on: https://localhost:7225
+2024-12-15 19:34:13.228 +03:00 [INF] Now listening on: http://localhost:5151
+2024-12-15 19:34:13.426 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-15 19:34:13.439 +03:00 [INF] Hosting environment: Development
+2024-12-15 19:34:13.449 +03:00 [INF] Content root path: D:\marketplace\microservices\UserService
+2024-12-15 19:34:13.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/index.html - null null
+2024-12-15 19:34:13.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/index.html - 200 null text/html;charset=utf-8 211.5212ms
+2024-12-15 19:34:13.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-15 19:34:13.837 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/_vs/browserLink - null null
+2024-12-15 19:34:13.837 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 10.2089ms
+2024-12-15 19:34:13.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.7244ms
+2024-12-15 19:34:14.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - null null
+2024-12-15 19:34:14.161 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.216ms
+2024-12-15 19:34:17.102 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7225/api/User/list - null null
+2024-12-15 19:34:17.110 +03:00 [INF] Executing endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 19:34:17.127 +03:00 [INF] Route matched with {action = "GetUserList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserMicroservice.Model.User]]] GetUserListAsync() on controller UserMicroservice.Controllers.UserController (UserMicroservice).
+2024-12-15 19:34:17.132 +03:00 [INF] Fetching the list of users.
+2024-12-15 19:34:17.158 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserMicroservice.Model.User, UserMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-15 19:34:17.172 +03:00 [INF] Executed action UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice) in 39.1473ms
+2024-12-15 19:34:17.174 +03:00 [INF] Executed endpoint 'UserMicroservice.Controllers.UserController.GetUserListAsync (UserMicroservice)'
+2024-12-15 19:34:17.178 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7225/api/User/list - 200 null application/json; charset=utf-8 76.7183ms

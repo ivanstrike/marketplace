@@ -1,4 +1,5 @@
 using ProductCartMicroservice.Data;
+using ProductCartMicroservice.RabbitMQ;
 using ProductCartMicroservice.Services;
 using ProductCartMicroservice.Utility;
 using Serilog;
@@ -13,8 +14,9 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 builder.Host.UseSerilog();
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
-builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddSingleton<RabbitMqPublisher>();
 builder.Services.AddSingleton<RabbitMqConsumer>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddHostedService<RabbitMqConsumerBackgroundService>();
 
 builder.Services.AddDbContext<DbContextClass>();

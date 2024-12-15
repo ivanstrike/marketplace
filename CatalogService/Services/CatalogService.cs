@@ -1,7 +1,6 @@
 ﻿using CatalogMicroservice.Data;
 using CatalogMicroservice.Model;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 
 namespace CatalogMicroservice.Services
 {
@@ -26,33 +25,30 @@ namespace CatalogMicroservice.Services
             return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<Product> AddProductAsync(ProductDTO product)
+        public async Task<Product> CreateProductAsync(ProductDTO productDto, Guid creatorId)
         {
-            Guid guid = Guid.NewGuid();
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId))
-            {
-                return Unauthorized();
-            }
-            string imgUrl = await _amazonS3Service.UploadFileAsync(product.ImageFile);
+            
+            Guid productId = Guid.NewGuid();
+
+            string imageUrl = await _amazonS3Service.UploadFileAsync(productDto.ImageFile);
+            if (string.IsNullOrEmpty(imageUrl))
+                throw new InvalidOperationException("Image upload failed.");
+
+            
             Product newProduct = new Product
             {
-                Id = guid,
-                Name = product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                ProductCreatorId = userId,
-                ImageUrl = imgUrl
+                Id = productId,
+                Name = productDto.Name,
+                Description = productDto.Description,
+                Price = productDto.Price,
+                ImageUrl = imageUrl,
+                ProductCreatorId = creatorId
             };
-            await _context.Products.AddAsync(newProduct);
-            return newProduct;
-        }
 
-        public async Task<Product?> UpdateProductAsync(Product product)
-        {
-            _context.Products.Update(product);
+            await _context.Products.AddAsync(newProduct);
             await _context.SaveChangesAsync();
-            return product;
+
+            return newProduct;
         }
 
         public async Task<bool> DeleteProductAsync(Guid id)
@@ -63,9 +59,36 @@ namespace CatalogMicroservice.Services
                 return false;
             }
 
+       
+            //await _amazonS3Service.DeleteFileAsync(product.ImageUrl);
+
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
+
             return true;
+        }
+
+        public async Task<Product?> UpdateProductAsync(Guid id, ProductDTO updatedProduct)
+        {
+            var product = await _context.Products.FirstOrDefaultAsync(u => u.Id == id);
+            if (product == null) return null;
+            string newImageUrl = await _amazonS3Service.UploadFileAsync(updatedProduct.ImageFile);
+            if (!string.IsNullOrEmpty(newImageUrl))
+            {
+                // Удаляем старое изображение
+                //await _amazonS3Service.DeleteFileAsync(product.ImageUrl);
+
+                product.ImageUrl = newImageUrl;
+            }
+
+         
+            product.Name = updatedProduct.Name;
+            product.Description = updatedProduct.Description;
+            product.Price = updatedProduct.Price;
+
+         
+            await _context.SaveChangesAsync();
+            return product;
         }
     }
 }

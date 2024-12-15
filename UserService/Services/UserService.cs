@@ -52,8 +52,6 @@ namespace UserMicroservice.Services
             await _publisher.PublishMessageAsync("user.created", new
             {
                 UserId = user.Id,
-                Name = user.Name,
-                Email = user.Email
             });
 
             return user;

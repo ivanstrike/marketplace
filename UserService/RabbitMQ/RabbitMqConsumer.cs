@@ -28,31 +28,51 @@ public class RabbitMqConsumer : IDisposable
         };
         _connection = factory.CreateConnection();
         _channel = _connection.CreateModel();
+        //_channel.ExchangeDeclare(exchange: "cart.exchange", type: ExchangeType.Topic, durable: true);
 
-        // Exchange and queue setup
-        _channel.ExchangeDeclare(exchange: "cart.exchange", type: ExchangeType.Topic);
-        var queueName = _channel.QueueDeclare().QueueName;
-        _channel.QueueBind(queue: queueName, exchange: "cart.exchange", routingKey: "cart.created");
+        // Dead Letter Exchange
+        _channel.ExchangeDeclare(exchange: "dead_letter_exchange", type: ExchangeType.Direct);
+        _channel.QueueDeclare(queue: "dead_letter_queue", durable: true, exclusive: false, autoDelete: false);
+        _channel.QueueBind(queue: "dead_letter_queue", exchange: "dead_letter_exchange", routingKey: "cart.created.dlx");
 
+        // Queue setup with DLX
+        var args = new Dictionary<string, object>
+        {
+        { "x-dead-letter-exchange", "dead_letter_exchange" },
+        { "x-dead-letter-routing-key", "cart.created.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "cart_created_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "cart_created_queue", exchange: "user.exchange", routingKey: "cart.created");
+
+        
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += async (model, ea) =>
         {
-            using (var scope = _serviceProvider.CreateScope())
+            try
             {
-                var body = ea.Body.ToArray();
-                var message = Encoding.UTF8.GetString(body);
-                var cartCreatedEvent = JsonSerializer.Deserialize<CartCreatedEvent>(message);
+                using (var scope = _serviceProvider.CreateScope())
+                    {
+                        var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
+                        var body = ea.Body.ToArray();
+                        var message = Encoding.UTF8.GetString(body);
+                        var cartCreatedEvent = JsonSerializer.Deserialize<CartCreatedEvent>(message);
 
-                if (cartCreatedEvent != null)
-                {
-                    // Обновление пользователя
-                    var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
-                    await userService.UpdateProductCartIdAsync(cartCreatedEvent.UserId, cartCreatedEvent.CartId);
-                }
+                        if (cartCreatedEvent != null)
+                        {
+                            await userService.UpdateProductCartIdAsync(cartCreatedEvent.UserId, cartCreatedEvent.CartId);
+                        }
+                    }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+
         };
 
-        _channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+        _channel.BasicConsume(queue: "cart_created_queue", autoAck: false, consumer: consumer);
     }
 
     public void Dispose()
