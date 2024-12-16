@@ -94,6 +94,18 @@ namespace UserMicroservice.Services
             return true;
         }
 
+        public async Task<User> ValidateUser(UserLoginDTO loginDto)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDto.Email);
+            if (user == null)
+            {
+                return null;
+            }
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash);
+            return isPasswordValid ? user : null;
+        }
+
 
     }
 }

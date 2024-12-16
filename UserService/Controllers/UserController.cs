@@ -2,6 +2,7 @@
 using UserMicroservice.Model;
 using UserMicroservice.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UserMicroservice.Controllers
 {
@@ -19,6 +20,7 @@ namespace UserMicroservice.Controllers
         }
 
         [HttpGet("list")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<User>>> GetUserListAsync()
         {
             _logger.LogInformation("Fetching the list of users.");
@@ -26,6 +28,7 @@ namespace UserMicroservice.Controllers
             return Ok(users);
         }
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<User>> GetUserByIdAsync(Guid id)
         {
             _logger.LogInformation("Fetching user with ID {Id}", id);
@@ -58,6 +61,7 @@ namespace UserMicroservice.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<ActionResult<User>> UpdateUserAsync(Guid id, [FromBody] UpdateUserDTO updatedUser)
         {
             if (!ModelState.IsValid)
@@ -72,6 +76,7 @@ namespace UserMicroservice.Controllers
 
         // Удаление пользователя
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<ActionResult> DeleteUserAsync(Guid id)
         {
             _logger.LogInformation("Deleting user with ID {Id}", id);

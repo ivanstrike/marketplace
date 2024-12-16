@@ -147,3 +147,12 @@ D:\marketplace\microservices\UserService\bin\Debug\net8.0\Serilog.Settings.Confi
 D:\marketplace\microservices\UserService\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\marketplace\microservices\UserService\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\marketplace\microservices\UserService\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\marketplace\microservices\UserService\obj\Debug\net8.0\UserMicroservice.sourcelink.json
