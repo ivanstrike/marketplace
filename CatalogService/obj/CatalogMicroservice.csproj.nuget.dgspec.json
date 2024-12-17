@@ -45,14 +45,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AWSSDK.Extensions.NETCore.Setup": {
-              "target": "Package",
-              "version": "[3.7.301, )"
-            },
-            "AWSSDK.S3": {
-              "target": "Package",
-              "version": "[3.7.410.6, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -68,6 +60,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Minio": {
+              "target": "Package",
+              "version": "[6.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

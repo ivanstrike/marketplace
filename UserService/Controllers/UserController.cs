@@ -27,6 +27,7 @@ namespace UserMicroservice.Controllers
             var users = await _userService.GetUserListAsync();
             return Ok(users);
         }
+
         [HttpGet("{id}")]
         [Authorize]
         public async Task<ActionResult<User>> GetUserByIdAsync(Guid id)

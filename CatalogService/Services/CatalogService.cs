@@ -7,12 +7,12 @@ namespace CatalogMicroservice.Services
     public class CatalogService : ICatalogService
     {
         private readonly DbContextClass _context;
-        private readonly AmazonS3Service _amazonS3Service;
+        private readonly IMinioService _minioService;
 
-        public CatalogService(DbContextClass context, AmazonS3Service amazonS3Service)
+        public CatalogService(DbContextClass context, IMinioService minioService)
         {
             _context = context;
-            _amazonS3Service = amazonS3Service;
+            _minioService = minioService;
         }
 
         public async Task<IEnumerable<Product>> GetProductListAsync()
@@ -30,7 +30,7 @@ namespace CatalogMicroservice.Services
             
             Guid productId = Guid.NewGuid();
 
-            string imageUrl = await _amazonS3Service.UploadFileAsync(productDto.ImageFile);
+            string imageUrl = await _minioService.UploadFileAsync(productDto.ImageFile);
             if (string.IsNullOrEmpty(imageUrl))
                 throw new InvalidOperationException("Image upload failed.");
 
@@ -60,7 +60,7 @@ namespace CatalogMicroservice.Services
             }
 
        
-            //await _amazonS3Service.DeleteFileAsync(product.ImageUrl);
+            await _minioService.DeleteFileAsync(product.ImageUrl);
 
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
@@ -72,11 +72,11 @@ namespace CatalogMicroservice.Services
         {
             var product = await _context.Products.FirstOrDefaultAsync(u => u.Id == id);
             if (product == null) return null;
-            string newImageUrl = await _amazonS3Service.UploadFileAsync(updatedProduct.ImageFile);
+            string newImageUrl = await _minioService.UploadFileAsync(updatedProduct.ImageFile);
             if (!string.IsNullOrEmpty(newImageUrl))
             {
-                // Удаляем старое изображение
-                //await _amazonS3Service.DeleteFileAsync(product.ImageUrl);
+                
+                await _minioService.DeleteFileAsync(product.ImageUrl);
 
                 product.ImageUrl = newImageUrl;
             }
