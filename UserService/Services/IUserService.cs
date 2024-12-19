@@ -10,6 +10,6 @@ namespace UserMicroservice.Services
         Task<User?> UpdateUserAsync(Guid id, UpdateUserDTO updatedUser);
         Task<User?> UpdateProductCartIdAsync (Guid id, Guid productcartId);
         Task<bool> DeleteUserAsync(Guid id);
-        public Task<User> ValidateUser(UserLoginDTO loginDto);
+        Task<User> ValidateUser(UserLoginDTO loginDto);
     }
 }

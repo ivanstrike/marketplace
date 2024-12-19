@@ -1,40 +1,43 @@
 ﻿using CatalogMicroservice.Data;
 using CatalogMicroservice.Model;
+using CatalogMicroservice.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace CatalogMicroservice.Services
 {
     public class CatalogService : ICatalogService
     {
-        private readonly DbContextClass _context;
         private readonly IMinioService _minioService;
+        private readonly IProductRepository _productRepository;
+        private readonly IRabbitMqService _rabbitMqService;
 
-        public CatalogService(DbContextClass context, IMinioService minioService)
+        public CatalogService(IProductRepository productRepository, IMinioService minioService, IRabbitMqService rabbitMqService)
         {
-            _context = context;
+            _productRepository = productRepository;
             _minioService = minioService;
+            _rabbitMqService = rabbitMqService;
         }
 
         public async Task<IEnumerable<Product>> GetProductListAsync()
         {
-            return await _context.Products.ToListAsync();
+            return await _productRepository.GetAllProductsAsync();
         }
 
-        public async Task<Product?> GetProductByIdAsync(Guid id)
+        public async Task<Product?> GetProductByIdAsync(Guid productId)
         {
-            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return await _productRepository.GetProductByIdAsync(productId);
         }
 
         public async Task<Product> CreateProductAsync(ProductDTO productDto, Guid creatorId)
         {
-            
             Guid productId = Guid.NewGuid();
 
+            // Загружаем изображение в Minio
             string imageUrl = await _minioService.UploadFileAsync(productDto.ImageFile);
             if (string.IsNullOrEmpty(imageUrl))
                 throw new InvalidOperationException("Image upload failed.");
 
-            
+            // Создаем продукт
             Product newProduct = new Product
             {
                 Id = productId,
@@ -45,50 +48,52 @@ namespace CatalogMicroservice.Services
                 ProductCreatorId = creatorId
             };
 
-            await _context.Products.AddAsync(newProduct);
-            await _context.SaveChangesAsync();
+            var createdProduct = await _productRepository.CreateProductAsync(newProduct);
 
-            return newProduct;
+            var message = new
+            {
+                UserId = creatorId,
+                ProductId = createdProduct.Id,
+                Event = "ProductCreated"
+            };
+            _rabbitMqService.PublishMessage("UserServiceQueue", message);
+
+            return createdProduct;
         }
 
-        public async Task<bool> DeleteProductAsync(Guid id)
+        public async Task<bool> DeleteProductAsync(Guid productId)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _productRepository.GetProductByIdAsync(productId);
             if (product == null)
             {
                 return false;
             }
 
-       
             await _minioService.DeleteFileAsync(product.ImageUrl);
 
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-
-            return true;
+            return await _productRepository.DeleteProductAsync(productId);
         }
 
-        public async Task<Product?> UpdateProductAsync(Guid id, ProductDTO updatedProduct)
+        public async Task<Product?> UpdateProductAsync(Guid productId, ProductDTO updatedProduct)
         {
-            var product = await _context.Products.FirstOrDefaultAsync(u => u.Id == id);
+            var product = await _productRepository.GetProductByIdAsync(productId);
             if (product == null) return null;
+
             string newImageUrl = await _minioService.UploadFileAsync(updatedProduct.ImageFile);
             if (!string.IsNullOrEmpty(newImageUrl))
             {
-                
                 await _minioService.DeleteFileAsync(product.ImageUrl);
-
-                product.ImageUrl = newImageUrl;
             }
 
-         
-            product.Name = updatedProduct.Name;
-            product.Description = updatedProduct.Description;
-            product.Price = updatedProduct.Price;
+            var productForUpdate = new UpdateProductDTO
+            {
+                Name = updatedProduct.Name,
+                Description = updatedProduct.Description,
+                Price = updatedProduct.Price,
+                ImageUrl = newImageUrl,
+            };
 
-         
-            await _context.SaveChangesAsync();
-            return product;
+            return await _productRepository.UpdateProductAsync(productId, productForUpdate);
         }
     }
 }

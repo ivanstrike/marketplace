@@ -7,8 +7,9 @@ namespace CatalogMicroservice.Services
     {
         private readonly IMinioClient _minioClient;
         private readonly IConfiguration _configuration;
+        private readonly ILogger _logger;
 
-        public MinioService(IConfiguration configuration)
+        public MinioService(IConfiguration configuration, ILogger logger)
         {
             _configuration = configuration;
 
@@ -16,6 +17,7 @@ namespace CatalogMicroservice.Services
                 .WithEndpoint(_configuration["Minio:Endpoint"])
                 .WithCredentials(_configuration["Minio:AccessKey"], _configuration["Minio:SecretKey"])
                 .Build();
+            _logger = logger;
         }
 
         public async Task<string> UploadFileAsync(IFormFile file)
@@ -27,7 +29,7 @@ namespace CatalogMicroservice.Services
             await file.CopyToAsync(memoryStream);
             memoryStream.Seek(0, SeekOrigin.Begin);
 
-            // Убедимся, что бакет существует, или создадим его
+            // бакет существует, или создадим его
             bool bucketExists = await _minioClient.BucketExistsAsync(new BucketExistsArgs().WithBucket(bucketName));
             if (!bucketExists)
             {
@@ -64,7 +66,7 @@ namespace CatalogMicroservice.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error downloading file: {ex.Message}");
+                _logger.LogError($"Error downloading file: {ex.Message}");
                 return null;
             }
         }
@@ -83,7 +85,7 @@ namespace CatalogMicroservice.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting file: {ex.Message}");
+                _logger.LogError($"Error deleting file: {ex.Message}");
                 return false;
             }
         }
