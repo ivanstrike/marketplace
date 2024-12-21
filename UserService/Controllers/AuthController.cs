@@ -34,18 +34,19 @@ namespace UserMicroservice.Controllers
                 return Unauthorized();
 
            
-            var token = GenerateJwtToken(user.Id);
+            var token = GenerateJwtToken(user.Id, user.ProductCartId);
             return Ok(new { Token = token });
         }
 
-        private string GenerateJwtToken(Guid userId)
+        private string GenerateJwtToken(Guid userId, Guid? cartId)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, userId.ToString())
+                new Claim("UserId", userId.ToString()),
+                new Claim("CartId", cartId.ToString())
             };
 
             var token = new JwtSecurityToken(

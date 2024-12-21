@@ -43,43 +43,16 @@ namespace ProductCartMicroservice.Services
             return cart;
         }
 
-        public async Task<Cart?> UpdateCartItemAsync(Guid cartId, UpdateCartItemDTO itemUpdate)
+        public async Task<bool> AddToCart(AddCartItemDTO addedProduct)
         {
-            var cart = await GetCartByIdAsync(cartId);
-            if (cart == null) return null;
-
-            var cartItem = cart.Items.FirstOrDefault(i => i.ProductId == itemUpdate.ProductId);
-
-            if (itemUpdate.Quantity <= 0)
+            var addedItem = new CartItem()
             {
-                // Удалить товар из корзины
-                if (cartItem != null)
-                {
-                    cart.Items.Remove(cartItem);
-                }
-            }
-            else
-            {
-                if (cartItem == null)
-                {
-                    // Добавить новый товар
-                    cart.Items.Add(new CartItem
-                    {
-                        ProductId = itemUpdate.ProductId,
-                        Quantity = itemUpdate.Quantity
-                    });
-                }
-                else
-                {
-                    // Обновить количество
-                    cartItem.Quantity = itemUpdate.Quantity;
-                }
-            }
-
-            cart.UpdatedAt = DateTime.UtcNow;
-            await _context.SaveChangesAsync();
-
-            return cart;
+                Id = Guid.NewGuid(),
+                Name = addedProduct.Name,
+                Price = addedProduct.Price,
+                ProductId = addedProduct.ProductId,
+            };
+            return await
         }
 
         public async Task<bool> DeleteCartAsync(Guid id)

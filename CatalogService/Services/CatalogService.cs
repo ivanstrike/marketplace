@@ -62,7 +62,20 @@ namespace CatalogMicroservice.Services
 
             return createdProduct;
         }
+        public async Task<Product> AddToCartAsync(Guid cartId, Guid productId)
+        {
+            var product = await _productRepository.GetProductByIdAsync(productId);
+            /*await _publisher.PublishMessageAsync("user.created", new
+            {
+                CartId = cartId,
+                UserId = user.Id,
+            });
+            1 Настроить отправку в корзину
+            2 Настроить принятие в корзине
+            */
 
+            return product;
+        }
         public async Task<bool> DeleteProductAsync(Guid productId)
         {
             var product = await _productRepository.GetProductByIdAsync(productId);

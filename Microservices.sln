@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogMicroservice", "Cata
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{9DFF9F68-7835-4C57-B146-2D205009EEBE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderMicroservice", "OrderService\OrderMicroservice.csproj", "{01A962B5-960A-426E-A431-1E980449FBC9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCartMicroservice", "ProductCartService\ProductCartMicroservice.csproj", "{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{F0966B81-404D-4CB9-B333-455B2384F1A4}"
@@ -36,10 +34,6 @@ Global
 		{9DFF9F68-7835-4C57-B146-2D205009EEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DFF9F68-7835-4C57-B146-2D205009EEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DFF9F68-7835-4C57-B146-2D205009EEBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01A962B5-960A-426E-A431-1E980449FBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01A962B5-960A-426E-A431-1E980449FBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01A962B5-960A-426E-A431-1E980449FBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01A962B5-960A-426E-A431-1E980449FBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}.Release|Any CPU.ActiveCfg = Release|Any CPU

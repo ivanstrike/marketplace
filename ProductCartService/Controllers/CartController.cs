@@ -97,28 +97,7 @@ namespace ProductCartMicroservice.Controllers
             }
         }
 
-        // Обновление элемента корзины
-        [HttpPut("{cartId}")]
-        public async Task<ActionResult<Cart>> UpdateCartItemAsync(Guid cartId, [FromBody] UpdateCartItemDTO itemUpdate)
-        {
-            try
-            {
-                _logger.LogInformation("Updating item in cart with ID {CartId}", cartId);
-                var updatedCart = await _cartService.UpdateCartItemAsync(cartId, itemUpdate);
-                if (updatedCart == null)
-                {
-                    _logger.LogWarning("Cart with ID {CartId} not found.", cartId);
-                    return NotFound(new { message = $"Cart with ID {cartId} not found." });
-                }
-
-                return Ok(updatedCart);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while updating item in cart with ID {CartId}", cartId);
-                return StatusCode(500, new { message = "Internal server error." });
-            }
-        }
+     
 
         // Удаление корзины
         [HttpDelete("{id}")]

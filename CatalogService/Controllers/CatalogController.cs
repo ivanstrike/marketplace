@@ -1,5 +1,6 @@
 ﻿using CatalogMicroservice.Model;
 using CatalogMicroservice.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -35,15 +36,36 @@ namespace CatalogMicroservice.Controllers
 
         
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(Guid creatorId, [FromForm] ProductDTO productDto)
+        [Authorize]
+        public async Task<IActionResult> CreateProduct([FromForm] ProductDTO productDto)
         {
-            //Guid creatorId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? Guid.Empty.ToString());
+            var cartIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "UserId");
+            if (cartIdClaim == null)
+            {
+                return Unauthorized(new { message = "UserId is missing in the token." });
+            }
+
+            var creatorId = Guid.Parse(cartIdClaim.Value);
 
             var product = await _catalogService.CreateProductAsync(creatorId, productDto);
             return Ok(product);
         }
-        
-        
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> AddToCart(Guid productId)
+        {
+            var cartIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "CartId");
+            if (cartIdClaim == null)
+            {
+                return Unauthorized(new { message = "CartId is missing in the token." });
+            }
+
+            var cartId = Guid.Parse(cartIdClaim.Value);
+            var product = await _catalogService.AddToCartAsync(cartId, productId);
+
+            return Ok(product);
+        }
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateProduct(Guid id, [FromForm] ProductDTO productDto)

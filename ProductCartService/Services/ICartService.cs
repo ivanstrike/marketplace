@@ -10,7 +10,7 @@ namespace ProductCartMicroservice.Services
     
         Task<Cart> CreateCartAsync(Cart cart);
 
-        Task<Cart?> UpdateCartItemAsync(Guid id, UpdateCartItemDTO updatedCart);
+        Task<CartItem> AddToCart(Guid productId);
 
         Task<bool> DeleteCartAsync(Guid id);
  

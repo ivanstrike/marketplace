@@ -146,3 +146,4 @@ D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\refint\ProductC
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicroservice.pdb
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicroservice.genruntimeconfig.cache
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ref\ProductCartMicroservice.dll
+D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicroservice.sourcelink.json
