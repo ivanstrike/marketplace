@@ -7,9 +7,9 @@ namespace CatalogMicroservice.Services
     {
         private readonly IMinioClient _minioClient;
         private readonly IConfiguration _configuration;
-        private readonly ILogger _logger;
+        private readonly ILogger<MinioService> _logger;
 
-        public MinioService(IConfiguration configuration, ILogger logger)
+        public MinioService(IConfiguration configuration, ILogger<MinioService> logger)
         {
             _configuration = configuration;
 

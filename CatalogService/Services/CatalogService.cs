@@ -1,5 +1,6 @@
 ﻿using CatalogMicroservice.Data;
 using CatalogMicroservice.Model;
+// using CatalogMicroservice.RabbitMQ;
 using CatalogMicroservice.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,13 +10,13 @@ namespace CatalogMicroservice.Services
     {
         private readonly IMinioService _minioService;
         private readonly IProductRepository _productRepository;
-        private readonly IRabbitMqService _rabbitMqService;
+        // private readonly RabbitMqPublisher _publisher;
 
-        public CatalogService(IProductRepository productRepository, IMinioService minioService, IRabbitMqService rabbitMqService)
+        public CatalogService(IProductRepository productRepository, IMinioService minioService)
         {
             _productRepository = productRepository;
             _minioService = minioService;
-            _rabbitMqService = rabbitMqService;
+            // _publisher = publisher;
         }
 
         public async Task<IEnumerable<Product>> GetProductListAsync()
@@ -28,12 +29,13 @@ namespace CatalogMicroservice.Services
             return await _productRepository.GetProductByIdAsync(productId);
         }
 
-        public async Task<Product> CreateProductAsync(ProductDTO productDto, Guid creatorId)
+        public async Task<Product> CreateProductAsync(Guid creatorId, ProductDTO productDto)
         {
             Guid productId = Guid.NewGuid();
 
             // Загружаем изображение в Minio
             string imageUrl = await _minioService.UploadFileAsync(productDto.ImageFile);
+           
             if (string.IsNullOrEmpty(imageUrl))
                 throw new InvalidOperationException("Image upload failed.");
 
@@ -56,7 +58,7 @@ namespace CatalogMicroservice.Services
                 ProductId = createdProduct.Id,
                 Event = "ProductCreated"
             };
-            _rabbitMqService.PublishMessage("UserServiceQueue", message);
+            // _publisher.PublishMessage("UserServiceQueue", message);
 
             return createdProduct;
         }

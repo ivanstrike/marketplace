@@ -33,14 +33,17 @@ namespace CatalogMicroservice.Controllers
             return Ok(product);
         }
 
+        
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromForm] ProductDTO productDto)
+        public async Task<IActionResult> CreateProduct(Guid creatorId, [FromForm] ProductDTO productDto)
         {
-            Guid creatorId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? Guid.Empty.ToString());
+            //Guid creatorId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? Guid.Empty.ToString());
 
-            var product = await _catalogService.CreateProductAsync(productDto, creatorId);
-            return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
+            var product = await _catalogService.CreateProductAsync(creatorId, productDto);
+            return Ok(product);
         }
+        
+        
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateProduct(Guid id, [FromForm] ProductDTO productDto)
