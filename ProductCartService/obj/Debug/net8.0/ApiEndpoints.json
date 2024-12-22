@@ -27,37 +27,6 @@
   },
   {
     "ContainingType": "ProductCartMicroservice.Controllers.CartController",
-    "Method": "UpdateCartItemAsync",
-    "RelativePath": "api/Cart/{cartId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cartId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "itemUpdate",
-        "Type": "ProductCartMicroservice.Model.UpdateCartItemDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ProductCartMicroservice.Model.Cart",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ProductCartMicroservice.Controllers.CartController",
     "Method": "GetCartByIdAsync",
     "RelativePath": "api/Cart/{id}",
     "HttpMethod": "GET",

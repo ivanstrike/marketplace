@@ -1,4 +1,5 @@
 ﻿using ProductCartMicroservice.Model;
+using ProductCartMicroservice.RabbitMQ.Events;
 
 namespace ProductCartMicroservice.Services
 {
@@ -10,7 +11,7 @@ namespace ProductCartMicroservice.Services
     
         Task<Cart> CreateCartAsync(Cart cart);
 
-        Task<CartItem> AddToCart(Guid productId);
+        Task<CartItem> AddToCart(CartItemAddedEvent addedProduct);
 
         Task<bool> DeleteCartAsync(Guid id);
  

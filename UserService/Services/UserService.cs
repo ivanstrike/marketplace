@@ -49,10 +49,8 @@ namespace UserMicroservice.Services
             await _context.SaveChangesAsync();
 
             // Отправить сообщение о создании пользователя
-            await _publisher.PublishMessageAsync("user.created", new
-            {
-                UserId = user.Id,
-            });
+            await _publisher.PublishMessageAsync("user.created", new { UserId = user.Id } );
+            
 
             return user;
         }
@@ -69,9 +67,9 @@ namespace UserMicroservice.Services
             return user;
         }
 
-        public async Task<User?> UpdateProductCartIdAsync(Guid id, Guid productcartId)
+        public async Task<User?> UpdateProductCartIdAsync(Guid userId, Guid productcartId)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null) return null;
 
             user.ProductCartId = productcartId;
@@ -89,7 +87,7 @@ namespace UserMicroservice.Services
             await _context.SaveChangesAsync();
 
             // Отправить сообщение о удалении пользователя
-            await _publisher.PublishMessageAsync("user.deleted", new { UserId = id });
+            await _publisher.PublishMessageAsync("user.deleted", new { UserId = id, CartID = user.ProductCartId });
 
             return true;
         }

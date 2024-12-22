@@ -154,3 +154,11 @@ D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\StackExchange.Redis
 D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\System.IO.Hashing.dll
 D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\System.Reactive.dll
 D:\marketplace\microservices\CatalogService\obj\Debug\net8.0\CatalogMicroservice.sourcelink.json
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\marketplace\microservices\CatalogService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

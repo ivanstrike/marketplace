@@ -34,8 +34,8 @@ namespace CatalogMicroservice.Controllers
             return Ok(product);
         }
 
-        
-        [HttpPost]
+
+        [HttpPost("create-product")]
         [Authorize]
         public async Task<IActionResult> CreateProduct([FromForm] ProductDTO productDto)
         {
@@ -51,7 +51,7 @@ namespace CatalogMicroservice.Controllers
             return Ok(product);
         }
 
-        [HttpPost]
+        [HttpPost("add-to-cart")]
         [Authorize]
         public async Task<IActionResult> AddToCart(Guid productId)
         {

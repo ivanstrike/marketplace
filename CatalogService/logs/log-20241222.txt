@@ -1,0 +1,160 @@
+2024-12-22 15:25:48.614 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:25:48.642 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:25:48.715 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:25:48.717 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:25:48.719 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:25:48.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:25:49.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 161.5005ms
+2024-12-22 15:25:49.189 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:25:49.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:25:49.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.501ms
+2024-12-22 15:25:49.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.7919ms
+2024-12-22 15:25:49.427 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:25:49.478 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Catalog" for actions - CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice),CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-22 15:25:49.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 67.2682ms
+2024-12-22 15:33:08.930 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:33:08.966 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:33:09.038 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:33:09.040 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:33:09.041 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:33:10.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:33:10.916 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 337.4521ms
+2024-12-22 15:33:10.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:33:10.976 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:33:10.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 12.1636ms
+2024-12-22 15:33:11.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.4775ms
+2024-12-22 15:33:11.339 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:33:11.413 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Catalog" for actions - CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice),CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-22 15:33:11.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 261.7387ms
+2024-12-22 15:37:35.310 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:37:35.743 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:37:35.746 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:37:35.931 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:37:35.932 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:37:35.933 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:37:36.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:37:37.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 486.0445ms
+2024-12-22 15:37:37.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:37:37.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:37:37.191 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 31.2773ms
+2024-12-22 15:37:37.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.9611ms
+2024-12-22 15:37:37.456 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:37:37.509 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Catalog" for actions - CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice),CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-22 15:37:37.556 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 101.1768ms
+2024-12-22 15:38:56.116 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:38:56.705 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:38:56.708 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:38:56.966 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:38:56.993 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:38:57.001 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:38:57.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:38:58.070 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 269.7073ms
+2024-12-22 15:38:58.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:38:58.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:38:58.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.0972ms
+2024-12-22 15:38:58.199 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.023ms
+2024-12-22 15:38:58.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:38:58.457 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Catalog" for actions - CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice),CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-22 15:38:58.500 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 93.9924ms
+2024-12-22 15:40:37.119 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:40:38.247 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:40:38.256 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:40:38.528 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:40:38.547 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:40:38.562 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:40:38.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:40:38.958 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 254.0725ms
+2024-12-22 15:40:39.024 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:40:39.025 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:40:39.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 9.9002ms
+2024-12-22 15:40:39.083 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.0988ms
+2024-12-22 15:40:39.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:40:39.454 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 116.8552ms
+2024-12-22 15:43:43.554 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:43:43.702 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:43:43.703 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:43:43.764 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:43:43.766 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:43:43.767 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:43:44.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 15:43:44.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 134.8164ms
+2024-12-22 15:43:44.333 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 15:43:44.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.2945ms
+2024-12-22 15:43:44.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 15:43:44.369 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.8054ms
+2024-12-22 15:43:44.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 15:43:44.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.0803ms
+2024-12-22 15:45:56.777 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/create-product - multipart/form-data; boundary=----WebKitFormBoundarydTZAZu4w5OILJPI1 763082
+2024-12-22 15:45:56.787 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 15:45:57.735 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 15:45:57.738 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 15:45:57.739 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/create-product - 401 0 null 962.2686ms
+2024-12-22 15:49:49.854 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7121/api/Catalog/create-product - multipart/form-data; boundary=--------------------------110487823357142419386590 763140
+2024-12-22 15:49:49.928 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice)'
+2024-12-22 15:49:49.950 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(CatalogMicroservice.Model.ProductDTO) on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 15:49:51.713 +03:00 [INF] Executing OkObjectResult, writing value of type 'CatalogMicroservice.Model.Product'.
+2024-12-22 15:49:51.726 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice) in 1771.5627ms
+2024-12-22 15:49:51.728 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice)'
+2024-12-22 15:49:51.735 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7121/api/Catalog/create-product - 200 null application/json; charset=utf-8 1881.3919ms
+2024-12-22 15:51:22.576 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/api/Catalog - null null
+2024-12-22 15:51:22.578 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice)'
+2024-12-22 15:51:22.582 +03:00 [INF] Route matched with {action = "GetAllProducts", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 15:51:22.797 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CatalogMicroservice.Model.Product, CatalogMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 15:51:22.798 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice) in 215.1905ms
+2024-12-22 15:51:22.800 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice)'
+2024-12-22 15:51:22.801 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/api/Catalog - 200 null application/json; charset=utf-8 225.196ms
+2024-12-22 15:56:17.359 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:56:17.600 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:56:17.602 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:56:17.754 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:56:17.756 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:56:17.758 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:56:28.377 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:56:28.584 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:56:28.586 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:56:28.669 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:56:28.670 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:56:28.671 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:59:42.347 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:59:42.522 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:59:42.523 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:59:42.603 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:59:42.605 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:59:42.606 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 15:59:49.152 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 15:59:49.329 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 15:59:49.331 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 15:59:49.407 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 15:59:49.408 +03:00 [INF] Hosting environment: Development
+2024-12-22 15:59:49.418 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService

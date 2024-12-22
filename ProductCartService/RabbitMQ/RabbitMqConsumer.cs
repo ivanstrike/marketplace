@@ -37,10 +37,20 @@ public class RabbitMqConsumer : IDisposable
         // Dead Letter Exchange
         _channel.ExchangeDeclare(exchange: "dead_letter_exchange", type: ExchangeType.Direct);
         _channel.QueueDeclare(queue: "dead_letter_queue", durable: true, exclusive: false, autoDelete: false);
-        _channel.QueueBind(queue: "dead_letter_queue", exchange: "dead_letter_exchange", routingKey: "user.created.dlx");
+        _channel.QueueBind(queue: "dead_letter_queue", exchange: "dead_letter_exchange", routingKey: "user.deleted.dlx");
 
-        // Queue setup with DLX
+        // Queue setup with DLX for user.deleted
         var args = new Dictionary<string, object>
+        {
+            { "x-dead-letter-exchange", "dead_letter_exchange" },
+            { "x-dead-letter-routing-key", "user.deleted.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "user_deleted_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "user_deleted_queue", exchange: "user.exchange", routingKey: "user.deleted");
+
+        // Queue setup with DLX for user.created
+        args = new Dictionary<string, object>
         {
             { "x-dead-letter-exchange", "dead_letter_exchange" },
             { "x-dead-letter-routing-key", "user.created.dlx" }
@@ -49,8 +59,54 @@ public class RabbitMqConsumer : IDisposable
         _channel.QueueDeclare(queue: "user_created_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
         _channel.QueueBind(queue: "user_created_queue", exchange: "user.exchange", routingKey: "user.created");
 
-        var consumer = new EventingBasicConsumer(_channel);
-        consumer.Received += async (model, ea) =>
+       
+        args = new Dictionary<string, object>
+        {
+            { "x-dead-letter-exchange", "dead_letter_exchange" },
+            { "x-dead-letter-routing-key", "cart.item_added.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "cart_item_added_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "cart_item_added_queue", exchange: "cart.exchange", routingKey: "cart.item_added");
+
+        // Consumer for cart.item_added
+        var cartItemAddedConsumer = new EventingBasicConsumer(_channel);
+        cartItemAddedConsumer.Received += async (model, ea) =>
+        {
+            try
+            {
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var cartService = scope.ServiceProvider.GetRequiredService<ICartService>();
+
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var cartItemAddedEvent = JsonSerializer.Deserialize<CartItemAddedEvent>(message);
+
+                    if (cartItemAddedEvent != null)
+                    {
+
+                        cartService.AddToCart(cartItemAddedEvent);
+
+                    }
+                }
+
+                // Подтверждение успешной обработки сообщения
+                _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing user.created message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+        };
+
+        _channel.BasicConsume(queue: "cart_item_added_queue", autoAck: false, consumer: cartItemAddedConsumer);
+
+
+        // Consumer for user.created
+        var userCreatedConsumer = new EventingBasicConsumer(_channel);
+        userCreatedConsumer.Received += async (model, ea) =>
         {
             try
             {
@@ -79,7 +135,7 @@ public class RabbitMqConsumer : IDisposable
                             CartId = cart.Id
                         };
 
-                        rabbitMqPublisher.PublishMessage("cart.created", cartCreatedEvent);
+                        rabbitMqPublisher.PublishMessageAsync("cart.created", cartCreatedEvent);
                     }
                 }
 
@@ -88,12 +144,45 @@ public class RabbitMqConsumer : IDisposable
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error processing message: {ex.Message}");
+                Console.WriteLine($"Error processing user.created message: {ex.Message}");
                 _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
             }
         };
 
-        _channel.BasicConsume(queue: "user_created_queue", autoAck: false, consumer: consumer);
+        _channel.BasicConsume(queue: "user_created_queue", autoAck: false, consumer: userCreatedConsumer);
+
+        // Consumer for user.deleted
+        var userDeletedConsumer = new EventingBasicConsumer(_channel);
+        userDeletedConsumer.Received += async (model, ea) =>
+        {
+            try
+            {
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var cartService = scope.ServiceProvider.GetRequiredService<ICartService>();
+
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var userDeletedEvent = JsonSerializer.Deserialize<UserDeletedEvent>(message);
+
+                    if (userDeletedEvent != null)
+                    {
+                        
+                        await cartService.DeleteCartAsync(userDeletedEvent.ProdutCartId);
+                    }
+                }
+
+                
+                _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing user.deleted message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+        };
+
+        _channel.BasicConsume(queue: "user_deleted_queue", autoAck: false, consumer: userDeletedConsumer);
     }
 
     public void Dispose()

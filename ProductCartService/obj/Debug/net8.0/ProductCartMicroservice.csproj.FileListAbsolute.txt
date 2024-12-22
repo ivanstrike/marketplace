@@ -147,3 +147,11 @@ D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicr
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicroservice.genruntimeconfig.cache
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ref\ProductCartMicroservice.dll
 D:\marketplace\microservices\ProductCartService\obj\Debug\net8.0\ProductCartMicroservice.sourcelink.json
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\marketplace\microservices\ProductCartService\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

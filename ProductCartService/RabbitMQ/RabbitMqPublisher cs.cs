@@ -32,7 +32,7 @@ namespace ProductCartMicroservice.RabbitMQ
             _channel.ExchangeDeclare(exchange: "user.exchange", type: ExchangeType.Topic, durable: true);
         }
 
-        public void PublishMessage(string routingKey, object message)
+        public Task PublishMessageAsync(string routingKey, object message)
         {
             var properties = _channel.CreateBasicProperties();
             properties.Persistent = true;
@@ -40,6 +40,7 @@ namespace ProductCartMicroservice.RabbitMQ
             var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
             _channel.BasicPublish(exchange: "user.exchange", routingKey: routingKey, basicProperties: properties, body: body);
+            return Task.CompletedTask;
         }
 
         public void Dispose()

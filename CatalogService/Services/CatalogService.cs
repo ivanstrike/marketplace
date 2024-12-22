@@ -1,8 +1,11 @@
 ﻿using CatalogMicroservice.Data;
 using CatalogMicroservice.Model;
+using CatalogMicroservice.RabbitMQ.Events;
+
 // using CatalogMicroservice.RabbitMQ;
 using CatalogMicroservice.Repository;
 using Microsoft.EntityFrameworkCore;
+using ProductCartMicroservice.RabbitMQ;
 
 namespace CatalogMicroservice.Services
 {
@@ -10,13 +13,13 @@ namespace CatalogMicroservice.Services
     {
         private readonly IMinioService _minioService;
         private readonly IProductRepository _productRepository;
-        // private readonly RabbitMqPublisher _publisher;
+        private readonly RabbitMqPublisher _publisher;
 
-        public CatalogService(IProductRepository productRepository, IMinioService minioService)
+        public CatalogService(IProductRepository productRepository, IMinioService minioService, RabbitMqPublisher publisher)
         {
             _productRepository = productRepository;
             _minioService = minioService;
-            // _publisher = publisher;
+            _publisher = publisher;
         }
 
         public async Task<IEnumerable<Product>> GetProductListAsync()
@@ -65,15 +68,13 @@ namespace CatalogMicroservice.Services
         public async Task<Product> AddToCartAsync(Guid cartId, Guid productId)
         {
             var product = await _productRepository.GetProductByIdAsync(productId);
-            /*await _publisher.PublishMessageAsync("user.created", new
+            await _publisher.PublishMessageAsync("user.created", new ProductAddedToCartEvent
             {
                 CartId = cartId,
-                UserId = user.Id,
+                ProductId = product.Id,
+                Name = product.Name,
+                Price = product.Price
             });
-            1 Настроить отправку в корзину
-            2 Настроить принятие в корзине
-            */
-
             return product;
         }
         public async Task<bool> DeleteProductAsync(Guid productId)

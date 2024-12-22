@@ -2,6 +2,7 @@
 using ProductCartMicroservice.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using ProductCartMicroservice.RabbitMQ.Events;
 
 namespace ProductCartMicroservice.Services
 {
@@ -43,23 +44,41 @@ namespace ProductCartMicroservice.Services
             return cart;
         }
 
-        public async Task<bool> AddToCart(AddCartItemDTO addedProduct)
+        public async Task<CartItem> AddToCart(CartItemAddedEvent addedProduct)
         {
-            var addedItem = new CartItem()
+            var cart = await GetCartByIdAsync(addedProduct.CartId);
+            if (cart == null)
+            {
+                throw new Exception($"Cart with ID {addedProduct.CartId} not found.");
+            }
+
+            
+            if (cart.Items.Any(item => item.ProductId == addedProduct.ProductId))
+            {
+                throw new Exception("This product is already in the cart.");
+            }
+
+            var newItem = new CartItem
             {
                 Id = Guid.NewGuid(),
                 Name = addedProduct.Name,
                 Price = addedProduct.Price,
-                ProductId = addedProduct.ProductId,
+                ProductId = addedProduct.ProductId
             };
-            return await
+
+            cart.Items.Add(newItem);
+            _context.CartItems.Add(newItem);
+
+            await _context.SaveChangesAsync();
+
+            return newItem;
         }
 
         public async Task<bool> DeleteCartAsync(Guid id)
         {
             var cart = await GetCartByIdAsync(id);
             if (cart == null) return false;
-
+            _context.CartItems.RemoveRange(cart.Items);
             _context.Carts.Remove(cart);
             await _context.SaveChangesAsync();
             return true;
@@ -70,8 +89,8 @@ namespace ProductCartMicroservice.Services
             var cart = await GetCartByIdAsync(id);
             if (cart == null) return false;
 
+            _context.CartItems.RemoveRange(cart.Items);
             cart.Items.Clear();
-            cart.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
             return true;
