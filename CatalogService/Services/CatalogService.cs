@@ -59,16 +59,15 @@ namespace CatalogMicroservice.Services
             {
                 UserId = creatorId,
                 ProductId = createdProduct.Id,
-                Event = "ProductCreated"
             };
-            // _publisher.PublishMessage("UserServiceQueue", message);
+            await _publisher.PublishMessageAsync("user.exchnge", "product_added", message);
 
             return createdProduct;
         }
         public async Task<Product> AddToCartAsync(Guid cartId, Guid productId)
         {
             var product = await _productRepository.GetProductByIdAsync(productId);
-            await _publisher.PublishMessageAsync("user.created", new ProductAddedToCartEvent
+            await _publisher.PublishMessageAsync("cart.exchange", "cart.item_added", new ProductAddedToCartEvent
             {
                 CartId = cartId,
                 ProductId = product.Id,

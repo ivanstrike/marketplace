@@ -3,76 +3,8 @@
   "WorkspaceRootPath": "D:\\Marketplace\\Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\catalogmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\catalogmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\usermicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\usermicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\services\\catalogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,8 +15,112 @@
       "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\rabbitmq\\rabbitmqpublisher cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\services\\icatalogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\services\\icatalogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\rabbitmq\\rabbitmqpublisher cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\rabbitmq\\rabbitmqpublisher cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\rabbitmqconsumerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\rabbitmqconsumerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\events\\productcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\events\\productcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\events\\cartcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\events\\cartcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\productcartmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\productcartmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\usermicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\usermicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\catalogmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\catalogmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\model\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\model\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,14 +155,6 @@
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\services\\rabbitmqconsumerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\rabbitmqconsumerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\rabbitmqconsumerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\rabbitmq\\events\\userdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\rabbitmq\\events\\userdeletedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -135,24 +163,8 @@
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\rabbitmq\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\services\\icatalogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\services\\icatalogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\productcartmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\productcartmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\model\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -161,10 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\data\\dbcontextclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\utility\\rabbitmqsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -219,10 +227,6 @@
       "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\rabbitmq\\events\\cartcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\rabbitmq\\events\\cartcreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|d:\\marketplace\\microservices\\userservice\\model\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80DEC672-F8C1-4B05-9C7F-FC69E673A8F8}|UserService\\UserMicroservice.csproj|solutionrelative:userservice\\model\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -265,6 +269,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|d:\\marketplace\\microservices\\catalogservice\\migrations\\20241214202000_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A40223C-9CAE-49A8-82F4-816439F57F6B}|CatalogService\\CatalogMicroservice.csproj|solutionrelative:catalogservice\\migrations\\20241214202000_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|d:\\marketplace\\microservices\\productcartservice\\migrations\\20241222141126_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACA2740-18FB-4BE2-AAC7-5E6743D7272F}|ProductCartService\\ProductCartMicroservice.csproj|solutionrelative:productcartservice\\migrations\\20241222141126_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -274,7 +282,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -282,462 +290,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\CartService.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Services\\CartService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\CartService.cs",
-              "RelativeToolTip": "ProductCartService\\Services\\CartService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwB8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:16:56.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DbContextClass.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Data\\DbContextClass.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Data\\DbContextClass.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Data\\DbContextClass.cs",
-              "RelativeToolTip": "CatalogService\\Data\\DbContextClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T19:29:13.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DbContextClass.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Data\\DbContextClass.cs",
-              "RelativeDocumentMoniker": "UserService\\Data\\DbContextClass.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Data\\DbContextClass.cs",
-              "RelativeToolTip": "UserService\\Data\\DbContextClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:33:39.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CatalogMicroservice.csproj",
-              "DocumentMoniker": "D:\\marketplace\\microservices\\CatalogService\\CatalogMicroservice.csproj",
-              "RelativeDocumentMoniker": "CatalogService\\CatalogMicroservice.csproj",
-              "ToolTip": "D:\\marketplace\\microservices\\CatalogService\\CatalogMicroservice.csproj",
-              "RelativeToolTip": "CatalogService\\CatalogMicroservice.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-14T20:04:38.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CatalogController.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Controllers\\CatalogController.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Controllers\\CatalogController.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Controllers\\CatalogController.cs",
-              "RelativeToolTip": "CatalogService\\Controllers\\CatalogController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T16:53:43.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartItem.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Model\\CartItem.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartItem.cs",
-              "RelativeToolTip": "ProductCartService\\Model\\CartItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:00:23.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CartDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartDTO.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Model\\CartDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartDTO.cs",
-              "RelativeToolTip": "ProductCartService\\Model\\CartDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:54:14.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\Cart.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Model\\Cart.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\Cart.cs",
-              "RelativeToolTip": "ProductCartService\\Model\\Cart.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:52:39.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\appsettings.json",
-              "RelativeDocumentMoniker": "ProductCartService\\appsettings.json",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\appsettings.json",
-              "RelativeToolTip": "ProductCartService\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-12T19:40:05.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\appsettings.json",
-              "RelativeDocumentMoniker": "UserService\\appsettings.json",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\appsettings.json",
-              "RelativeToolTip": "UserService\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-11T08:38:32.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\appsettings.json",
-              "RelativeDocumentMoniker": "CatalogService\\appsettings.json",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\appsettings.json",
-              "RelativeToolTip": "CatalogService\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-14T19:37:04.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Program.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Program.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Program.cs",
-              "RelativeToolTip": "CatalogService\\Program.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAB0AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:14:48.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\Product.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Model\\Product.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\Product.cs",
-              "RelativeToolTip": "CatalogService\\Model\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T19:17:35.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RabbitMqConsumer.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAADgvz0AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:41:57.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "UserService\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\UserController.cs",
-              "RelativeToolTip": "UserService\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T17:17:41.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Program.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Program.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Program.cs",
-              "RelativeToolTip": "ProductCartService\\Program.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAIBJwCAAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:50:37.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RabbitMQPublisher.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMQPublisher.cs",
-              "RelativeDocumentMoniker": "UserService\\RabbitMQ\\RabbitMQPublisher.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMQPublisher.cs",
-              "RelativeToolTip": "UserService\\RabbitMQ\\RabbitMQPublisher.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwC8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T15:07:46.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Program.cs",
-              "RelativeDocumentMoniker": "UserService\\Program.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Program.cs",
-              "RelativeToolTip": "UserService\\Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAIBJwEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:57:39.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserMicroservice.csproj",
-              "DocumentMoniker": "D:\\marketplace\\microservices\\UserService\\UserMicroservice.csproj",
-              "RelativeDocumentMoniker": "UserService\\UserMicroservice.csproj",
-              "ToolTip": "D:\\marketplace\\microservices\\UserService\\UserMicroservice.csproj",
-              "RelativeToolTip": "UserService\\UserMicroservice.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-11T08:31:27.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CatalogService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\CatalogService.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Services\\CatalogService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\CatalogService.cs",
-              "RelativeToolTip": "CatalogService\\Services\\CatalogService.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAvwE0AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:21:46.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RabbitMqPublisher cs.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "RelativeDocumentMoniker": "CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "RelativeToolTip": "CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T11:02:42.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RabbitMqPublisher cs.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:29:32.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Repository\\ProductRepository.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\ProductRepository.cs",
-              "RelativeToolTip": "CatalogService\\Repository\\ProductRepository.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAgwE8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T17:21:20.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ICartService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\ICartService.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Services\\ICartService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\ICartService.cs",
-              "RelativeToolTip": "ProductCartService\\Services\\ICartService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAQwA0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:59:27.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "\u0421artItemAddedEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T11:43:19.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UpdateCartItemDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\UpdateCartItemDTO.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Model\\UpdateCartItemDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\UpdateCartItemDTO.cs",
-              "RelativeToolTip": "ProductCartService\\Model\\UpdateCartItemDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:03:07.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ProductAddedToCartEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
-              "RelativeDocumentMoniker": "CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
-              "RelativeToolTip": "CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T11:44:48.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CartCreatedEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T08:22:02.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
               "Title": "RabbitMqConsumer.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMqConsumer.cs",
               "RelativeDocumentMoniker": "UserService\\RabbitMQ\\RabbitMqConsumer.cs",
               "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMqConsumer.cs",
               "RelativeToolTip": "UserService\\RabbitMQ\\RabbitMqConsumer.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwD4AAABGAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAADwvzYAAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T08:31:23.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserDeletedEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T11:26:47.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RabbitMqConsumerBackgroundService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "RelativeDocumentMoniker": "UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "RelativeToolTip": "UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T09:15:04.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RabbitMqConsumerBackgroundService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "RelativeToolTip": "ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T08:27:47.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "UserCreatedEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:45:05.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 6,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "UserService\\Services\\UserService.cs",
               "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Services\\UserService.cs",
               "RelativeToolTip": "UserService\\Services\\UserService.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAowFkAAABvAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAwwHIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T14:55:08.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "UserService\\Services\\IUserService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Services\\IUserService.cs",
-              "RelativeToolTip": "UserService\\Services\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "DocumentIndex": 2,
+              "Title": "RabbitMqPublisher cs.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "RelativeDocumentMoniker": "CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "RelativeToolTip": "CatalogService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwCAAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T09:02:05.31Z",
+              "WhenOpened": "2024-12-22T11:02:42.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 1,
+              "Title": "CatalogService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\CatalogService.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Services\\CatalogService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\CatalogService.cs",
+              "RelativeToolTip": "CatalogService\\Services\\CatalogService.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAvwDkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T20:21:46.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RabbitMqConsumer.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\RabbitMqConsumer.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAADgv0sAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T20:41:57.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ICatalogService.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\ICatalogService.cs",
               "RelativeDocumentMoniker": "CatalogService\\Services\\ICatalogService.cs",
@@ -750,254 +368,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "UserService\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "UserService\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAfAAAA",
+              "DocumentIndex": 4,
+              "Title": "CatalogController.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Controllers\\CatalogController.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Controllers\\CatalogController.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Controllers\\CatalogController.cs",
+              "RelativeToolTip": "CatalogService\\Controllers\\CatalogController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAowEEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:33:09.984Z",
+              "WhenOpened": "2024-12-15T16:53:43.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ProductCartMicroservice.csproj",
-              "DocumentMoniker": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartMicroservice.csproj",
-              "RelativeDocumentMoniker": "ProductCartService\\ProductCartMicroservice.csproj",
-              "ToolTip": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartMicroservice.csproj",
-              "RelativeToolTip": "ProductCartService\\ProductCartMicroservice.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-09T21:42:22.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ProductDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\ProductDTO.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Model\\ProductDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\ProductDTO.cs",
-              "RelativeToolTip": "CatalogService\\Model\\ProductDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Services\\CartService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\CartService.cs",
+              "RelativeToolTip": "ProductCartService\\Services\\CartService.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAwwB8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:26:41.212Z",
+              "WhenOpened": "2024-12-12T20:16:56.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Controllers\\CartController.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Controllers\\CartController.cs",
-              "RelativeToolTip": "ProductCartService\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAowGMAAAAFAAAA",
+              "DocumentIndex": 8,
+              "Title": "RabbitMqPublisher cs.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\RabbitMqPublisher cs.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:56:19.968Z",
+              "WhenOpened": "2024-12-15T15:29:32.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "DbContextClass.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Data\\DbContextClass.cs",
-              "RelativeDocumentMoniker": "ProductCartService\\Data\\DbContextClass.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Data\\DbContextClass.cs",
-              "RelativeToolTip": "ProductCartService\\Data\\DbContextClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "UserService\\Services\\IUserService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Services\\IUserService.cs",
+              "RelativeToolTip": "UserService\\Services\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:38:22.335Z",
+              "WhenOpened": "2024-12-11T09:02:05.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "RabbitMqSettings.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Utility\\RabbitMqSettings.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Utility\\RabbitMqSettings.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Utility\\RabbitMqSettings.cs",
-              "RelativeToolTip": "CatalogService\\Utility\\RabbitMqSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "DocumentIndex": 10,
+              "Title": "RabbitMqConsumerBackgroundService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "RelativeDocumentMoniker": "UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "RelativeToolTip": "UserService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T19:35:42.88Z",
+              "WhenOpened": "2024-12-14T09:15:04.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IMinioService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\IMinioService.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Services\\IMinioService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\IMinioService.cs",
-              "RelativeToolTip": "CatalogService\\Services\\IMinioService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
+              "DocumentIndex": 11,
+              "Title": "ProductCreatedEvent.cs",
+              "DocumentMoniker": "D:\\marketplace\\microservices\\UserService\\RabbitMQ\\Events\\ProductCreatedEvent.cs",
+              "RelativeDocumentMoniker": "UserService\\RabbitMQ\\Events\\ProductCreatedEvent.cs",
+              "ToolTip": "D:\\marketplace\\microservices\\UserService\\RabbitMQ\\Events\\ProductCreatedEvent.cs",
+              "RelativeToolTip": "UserService\\RabbitMQ\\Events\\ProductCreatedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T21:07:41.75Z",
+              "WhenOpened": "2024-12-23T19:27:14.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MinioService.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\MinioService.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Services\\MinioService.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\MinioService.cs",
-              "RelativeToolTip": "CatalogService\\Services\\MinioService.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAgwDQAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T21:08:16.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeToolTip": "CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T18:03:54.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "UpdateProductDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\UpdateProductDTO.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Model\\UpdateProductDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\UpdateProductDTO.cs",
-              "RelativeToolTip": "CatalogService\\Model\\UpdateProductDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T19:29:47.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Dockerfile",
-              "RelativeDocumentMoniker": "UserService\\Dockerfile",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Dockerfile",
-              "RelativeToolTip": "UserService\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-14T10:21:02.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "RabbitMqSettings.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Utility\\RabbitMqSettings.cs",
-              "RelativeDocumentMoniker": "UserService\\Utility\\RabbitMqSettings.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Utility\\RabbitMqSettings.cs",
-              "RelativeToolTip": "UserService\\Utility\\RabbitMqSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T10:16:07.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\User.cs",
-              "RelativeDocumentMoniker": "UserService\\Model\\User.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\User.cs",
-              "RelativeToolTip": "UserService\\Model\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:10:50.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "CatalogService\\Repository\\IProductRepository.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\IProductRepository.cs",
-              "RelativeToolTip": "CatalogService\\Repository\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T21:10:09.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "D:\\Marketplace\\Microservices\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAAwAAAAAAAAAAIBpwDQAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-12-14T10:24:15.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeToolTip": "UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T11:19:52.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "UserLoginDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\UserLoginDTO.cs",
-              "RelativeDocumentMoniker": "UserService\\Model\\UserLoginDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\UserLoginDTO.cs",
-              "RelativeToolTip": "UserService\\Model\\UserLoginDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T07:43:37.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "UserCreatedEvent.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "RelativeDocumentMoniker": "UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "RelativeToolTip": "UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:33:29.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "CreateUserDTO.cs",
-              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\CreateUserDTO.cs",
-              "RelativeDocumentMoniker": "UserService\\Model\\CreateUserDTO.cs",
-              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\CreateUserDTO.cs",
-              "RelativeToolTip": "UserService\\Model\\CreateUserDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T17:36:53.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 12,
               "Title": "CartCreatedEvent.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
               "RelativeDocumentMoniker": "UserService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
@@ -1010,7 +459,547 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Program.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Program.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Program.cs",
+              "RelativeToolTip": "ProductCartService\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T20:50:37.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductCartMicroservice.csproj",
+              "DocumentMoniker": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartMicroservice.csproj",
+              "RelativeDocumentMoniker": "ProductCartService\\ProductCartMicroservice.csproj",
+              "ToolTip": "D:\\marketplace\\microservices\\ProductCartService\\ProductCartMicroservice.csproj",
+              "RelativeToolTip": "ProductCartService\\ProductCartMicroservice.csproj",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-09T21:42:22.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "20241222141126_Initial.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Migrations\\20241222141126_Initial.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Migrations\\20241222141126_Initial.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Migrations\\20241222141126_Initial.cs",
+              "RelativeToolTip": "ProductCartService\\Migrations\\20241222141126_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T14:11:26.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DbContextClass.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Data\\DbContextClass.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Data\\DbContextClass.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Data\\DbContextClass.cs",
+              "RelativeToolTip": "ProductCartService\\Data\\DbContextClass.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:38:22.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DbContextClass.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Data\\DbContextClass.cs",
+              "RelativeDocumentMoniker": "UserService\\Data\\DbContextClass.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Data\\DbContextClass.cs",
+              "RelativeToolTip": "UserService\\Data\\DbContextClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:33:39.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserMicroservice.csproj",
+              "DocumentMoniker": "D:\\marketplace\\microservices\\UserService\\UserMicroservice.csproj",
+              "RelativeDocumentMoniker": "UserService\\UserMicroservice.csproj",
+              "ToolTip": "D:\\marketplace\\microservices\\UserService\\UserMicroservice.csproj",
+              "RelativeToolTip": "UserService\\UserMicroservice.csproj",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-11T08:31:27.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\appsettings.json",
+              "RelativeDocumentMoniker": "UserService\\appsettings.json",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\appsettings.json",
+              "RelativeToolTip": "UserService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-11T08:38:32.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DbContextClass.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Data\\DbContextClass.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Data\\DbContextClass.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Data\\DbContextClass.cs",
+              "RelativeToolTip": "CatalogService\\Data\\DbContextClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T19:29:13.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Program.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Program.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Program.cs",
+              "RelativeToolTip": "CatalogService\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T20:14:48.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\appsettings.json",
+              "RelativeDocumentMoniker": "ProductCartService\\appsettings.json",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\appsettings.json",
+              "RelativeToolTip": "ProductCartService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-12T19:40:05.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\Cart.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Model\\Cart.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\Cart.cs",
+              "RelativeToolTip": "ProductCartService\\Model\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T18:52:39.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartItem.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Model\\CartItem.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartItem.cs",
+              "RelativeToolTip": "ProductCartService\\Model\\CartItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:00:23.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CartDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartDTO.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Model\\CartDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\CartDTO.cs",
+              "RelativeToolTip": "ProductCartService\\Model\\CartDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T20:54:14.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CatalogMicroservice.csproj",
+              "DocumentMoniker": "D:\\marketplace\\microservices\\CatalogService\\CatalogMicroservice.csproj",
+              "RelativeDocumentMoniker": "CatalogService\\CatalogMicroservice.csproj",
+              "ToolTip": "D:\\marketplace\\microservices\\CatalogService\\CatalogMicroservice.csproj",
+              "RelativeToolTip": "CatalogService\\CatalogMicroservice.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-14T20:04:38.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\appsettings.json",
+              "RelativeDocumentMoniker": "CatalogService\\appsettings.json",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\appsettings.json",
+              "RelativeToolTip": "CatalogService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T19:37:04.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\Product.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Model\\Product.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\Product.cs",
+              "RelativeToolTip": "CatalogService\\Model\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T19:17:35.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "UserService\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\UserController.cs",
+              "RelativeToolTip": "UserService\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:17:41.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RabbitMQPublisher.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMQPublisher.cs",
+              "RelativeDocumentMoniker": "UserService\\RabbitMQ\\RabbitMQPublisher.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\RabbitMQPublisher.cs",
+              "RelativeToolTip": "UserService\\RabbitMQ\\RabbitMQPublisher.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T15:07:46.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Program.cs",
+              "RelativeDocumentMoniker": "UserService\\Program.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Program.cs",
+              "RelativeToolTip": "UserService\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAIBJwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:57:39.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Repository\\ProductRepository.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "CatalogService\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwE8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T17:21:20.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\ICartService.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Services\\ICartService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\ICartService.cs",
+              "RelativeToolTip": "ProductCartService\\Services\\ICartService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwA0AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:59:27.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "\u0421artItemAddedEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\\u0421artItemAddedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T11:43:19.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UpdateCartItemDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\UpdateCartItemDTO.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Model\\UpdateCartItemDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Model\\UpdateCartItemDTO.cs",
+              "RelativeToolTip": "ProductCartService\\Model\\UpdateCartItemDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T19:03:07.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductAddedToCartEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
+              "RelativeDocumentMoniker": "CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
+              "RelativeToolTip": "CatalogService\\RabbitMQ\\Events\\ProductAddedToCartEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T11:44:48.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CartCreatedEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\CartCreatedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T08:22:02.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UserDeletedEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\UserDeletedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T11:26:47.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "RabbitMqConsumerBackgroundService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "RelativeToolTip": "ProductCartService\\Services\\RabbitMqConsumerBackgroundService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T08:27:47.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T20:45:05.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "UserService\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "UserService\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T07:33:09.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Model\\ProductDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\ProductDTO.cs",
+              "RelativeToolTip": "CatalogService\\Model\\ProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T20:26:41.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ProductCartService\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\ProductCartService\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ProductCartService\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAowGMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T21:56:19.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "RabbitMqSettings.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Utility\\RabbitMqSettings.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Utility\\RabbitMqSettings.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Utility\\RabbitMqSettings.cs",
+              "RelativeToolTip": "CatalogService\\Utility\\RabbitMqSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T19:35:42.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IMinioService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\IMinioService.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Services\\IMinioService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\IMinioService.cs",
+              "RelativeToolTip": "CatalogService\\Services\\IMinioService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T21:07:41.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MinioService.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\MinioService.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Services\\MinioService.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Services\\MinioService.cs",
+              "RelativeToolTip": "CatalogService\\Services\\MinioService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwDQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T21:08:16.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "CatalogService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:03:54.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "UpdateProductDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\UpdateProductDTO.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Model\\UpdateProductDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Model\\UpdateProductDTO.cs",
+              "RelativeToolTip": "CatalogService\\Model\\UpdateProductDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T19:29:47.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Dockerfile",
+              "RelativeDocumentMoniker": "UserService\\Dockerfile",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Dockerfile",
+              "RelativeToolTip": "UserService\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-14T10:21:02.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "RabbitMqSettings.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Utility\\RabbitMqSettings.cs",
+              "RelativeDocumentMoniker": "UserService\\Utility\\RabbitMqSettings.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Utility\\RabbitMqSettings.cs",
+              "RelativeToolTip": "UserService\\Utility\\RabbitMqSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T10:16:07.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\User.cs",
+              "RelativeDocumentMoniker": "UserService\\Model\\User.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\User.cs",
+              "RelativeToolTip": "UserService\\Model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:10:50.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "CatalogService\\Repository\\IProductRepository.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\CatalogService\\Repository\\IProductRepository.cs",
+              "RelativeToolTip": "CatalogService\\Repository\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T21:10:09.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Marketplace\\Microservices\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAwAAAAAAAAAAIBpwDQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-12-14T10:24:15.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "UserService\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:19:52.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserLoginDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\UserLoginDTO.cs",
+              "RelativeDocumentMoniker": "UserService\\Model\\UserLoginDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\UserLoginDTO.cs",
+              "RelativeToolTip": "UserService\\Model\\UserLoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T07:43:37.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "RelativeToolTip": "UserService\\RabbitMQ\\Events\\UserCreatedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:33:29.274Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 56,
+              "Title": "CreateUserDTO.cs",
+              "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\CreateUserDTO.cs",
+              "RelativeDocumentMoniker": "UserService\\Model\\CreateUserDTO.cs",
+              "ToolTip": "D:\\Marketplace\\Microservices\\UserService\\Model\\CreateUserDTO.cs",
+              "RelativeToolTip": "UserService\\Model\\CreateUserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:36:53.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
               "Title": "CartUpdatedEvent.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\RabbitMQ\\Events\\CartUpdatedEvent.cs",
               "RelativeDocumentMoniker": "ProductCartService\\RabbitMQ\\Events\\CartUpdatedEvent.cs",
@@ -1018,12 +1007,11 @@
               "RelativeToolTip": "ProductCartService\\RabbitMQ\\Events\\CartUpdatedEvent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T19:08:06.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T19:08:06.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "20241214202000_Initial.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\CatalogService\\Migrations\\20241214202000_Initial.cs",
               "RelativeDocumentMoniker": "CatalogService\\Migrations\\20241214202000_Initial.cs",
@@ -1031,12 +1019,11 @@
               "RelativeToolTip": "CatalogService\\Migrations\\20241214202000_Initial.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T20:20:00.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T20:20:00.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Dockerfile",
               "RelativeDocumentMoniker": "ProductCartService\\Dockerfile",
@@ -1044,12 +1031,11 @@
               "RelativeToolTip": "ProductCartService\\Dockerfile",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-14T10:22:43.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T10:22:43.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "StaticConfigurationManager.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Utility\\StaticConfigurationManager.cs",
               "RelativeDocumentMoniker": "ProductCartService\\Utility\\StaticConfigurationManager.cs",
@@ -1057,12 +1043,11 @@
               "RelativeToolTip": "ProductCartService\\Utility\\StaticConfigurationManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T09:19:38.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T09:19:38.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\appsettings.Development.json",
               "RelativeDocumentMoniker": "UserService\\appsettings.Development.json",
@@ -1070,12 +1055,11 @@
               "RelativeToolTip": "UserService\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-14T17:06:48.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T17:06:48.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "RabbitMqSettings.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\ProductCartService\\Utility\\RabbitMqSettings.cs",
               "RelativeDocumentMoniker": "ProductCartService\\Utility\\RabbitMqSettings.cs",
@@ -1083,12 +1067,11 @@
               "RelativeToolTip": "ProductCartService\\Utility\\RabbitMqSettings.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T10:05:49.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T10:05:49.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "20241211170611_Initial.Designer.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Migrations\\20241211170611_Initial.Designer.cs",
               "RelativeDocumentMoniker": "UserService\\Migrations\\20241211170611_Initial.Designer.cs",
@@ -1096,12 +1079,11 @@
               "RelativeToolTip": "UserService\\Migrations\\20241211170611_Initial.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAMwAwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T09:34:42.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T09:34:42.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "20241211170611_Initial.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Migrations\\20241211170611_Initial.cs",
               "RelativeDocumentMoniker": "UserService\\Migrations\\20241211170611_Initial.cs",
@@ -1109,12 +1091,11 @@
               "RelativeToolTip": "UserService\\Migrations\\20241211170611_Initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T17:06:11.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T17:06:11.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "DbContextClassModelSnapshot.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Migrations\\DbContextClassModelSnapshot.cs",
               "RelativeDocumentMoniker": "UserService\\Migrations\\DbContextClassModelSnapshot.cs",
@@ -1122,12 +1103,11 @@
               "RelativeToolTip": "UserService\\Migrations\\DbContextClassModelSnapshot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T09:18:04.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T09:18:04.725Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "UpdateUserDTO.cs",
               "DocumentMoniker": "D:\\Marketplace\\Microservices\\UserService\\Model\\UpdateUserDTO.cs",
               "RelativeDocumentMoniker": "UserService\\Model\\UpdateUserDTO.cs",
@@ -1135,8 +1115,7 @@
               "RelativeToolTip": "UserService\\Model\\UpdateUserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T09:19:54.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T09:19:54.521Z"
             },
             {
               "$type": "Bookmark",

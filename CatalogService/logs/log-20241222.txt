@@ -158,3 +158,105 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2024-12-22 15:59:49.407 +03:00 [INF] Application started. Press Ctrl+C to shut down.
 2024-12-22 15:59:49.408 +03:00 [INF] Hosting environment: Development
 2024-12-22 15:59:49.418 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 17:13:13.814 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:13:13.951 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 17:13:13.953 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 17:13:14.026 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:13:14.028 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:13:14.029 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 17:13:14.498 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 17:13:14.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 127.3827ms
+2024-12-22 17:13:14.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:13:14.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13773 application/javascript; charset=utf-8 7.7923ms
+2024-12-22 17:13:14.687 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 17:13:14.717 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.0963ms
+2024-12-22 17:13:14.953 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 17:13:15.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.4ms
+2024-12-22 17:14:29.929 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/create-product - multipart/form-data; boundary=----WebKitFormBoundary66CnjsiB7dAzKJTB 421
+2024-12-22 17:14:29.939 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 17:14:30.704 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:14:30.708 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:14:30.710 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/create-product - 401 0 null 781.2825ms
+2024-12-22 17:15:01.919 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7121/api/Catalog/create-product - multipart/form-data; boundary=--------------------------593458215875728468662273 763140
+2024-12-22 17:15:01.995 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice)'
+2024-12-22 17:15:02.015 +03:00 [INF] Route matched with {action = "CreateProduct", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(CatalogMicroservice.Model.ProductDTO) on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 17:15:02.306 +03:00 [INF] Creating product by user "61beddf3-f67d-479c-99c2-b96bd801573a".
+2024-12-22 17:15:03.564 +03:00 [INF] Product created successfully by user "61beddf3-f67d-479c-99c2-b96bd801573a" with ID "416b772c-b43e-40b3-af79-ceaa4dd59175".
+2024-12-22 17:15:03.570 +03:00 [INF] Executing OkObjectResult, writing value of type 'CatalogMicroservice.Model.Product'.
+2024-12-22 17:15:03.583 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice) in 1562.6248ms
+2024-12-22 17:15:03.585 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.CreateProduct (CatalogMicroservice)'
+2024-12-22 17:15:03.599 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7121/api/Catalog/create-product - 200 null application/json; charset=utf-8 1680.6086ms
+2024-12-22 17:15:27.942 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart - null 0
+2024-12-22 17:15:27.946 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 17:15:27.949 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:15:27.950 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:15:27.951 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart - 401 0 null 8.4885ms
+2024-12-22 17:16:19.952 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - null 0
+2024-12-22 17:16:19.954 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 17:16:19.955 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:16:19.956 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:16:19.957 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - 401 0 null 5.4922ms
+2024-12-22 17:16:41.461 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - multipart/form-data 0
+2024-12-22 17:16:41.465 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:16:41.469 +03:00 [INF] Route matched with {action = "AddToCart", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddToCart(System.Guid) on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 17:16:41.479 +03:00 [INF] Adding product "416b772c-b43e-40b3-af79-ceaa4dd59175" to cart "d57fbc89-085e-406f-8b67-c760152acfac".
+2024-12-22 17:16:41.729 +03:00 [INF] Product "416b772c-b43e-40b3-af79-ceaa4dd59175" added to cart "d57fbc89-085e-406f-8b67-c760152acfac" successfully.
+2024-12-22 17:16:41.731 +03:00 [INF] Executing OkObjectResult, writing value of type 'CatalogMicroservice.Model.Product'.
+2024-12-22 17:16:41.733 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice) in 262.6438ms
+2024-12-22 17:16:41.735 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:16:41.736 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - 200 null application/json; charset=utf-8 274.9196ms
+2024-12-22 17:18:25.297 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - multipart/form-data 0
+2024-12-22 17:18:25.302 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:18:25.303 +03:00 [INF] Route matched with {action = "AddToCart", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddToCart(System.Guid) on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 17:18:25.307 +03:00 [INF] Adding product "416b772c-b43e-40b3-af79-ceaa4dd59175" to cart "34a8b489-953f-4321-a6f0-091364c41b8e".
+2024-12-22 17:18:25.318 +03:00 [INF] Product "416b772c-b43e-40b3-af79-ceaa4dd59175" added to cart "34a8b489-953f-4321-a6f0-091364c41b8e" successfully.
+2024-12-22 17:18:25.320 +03:00 [INF] Executing OkObjectResult, writing value of type 'CatalogMicroservice.Model.Product'.
+2024-12-22 17:18:25.321 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice) in 16.3242ms
+2024-12-22 17:18:25.322 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:18:25.323 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=416b772c-b43e-40b3-af79-ceaa4dd59175 - 200 null application/json; charset=utf-8 26.0186ms
+2024-12-22 17:22:33.423 +03:00 [INF] User profile is available. Using 'C:\Users\ria-2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-22 17:22:33.564 +03:00 [INF] Now listening on: https://localhost:7121
+2024-12-22 17:22:33.565 +03:00 [INF] Now listening on: http://localhost:5118
+2024-12-22 17:22:33.636 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-22 17:22:33.638 +03:00 [INF] Hosting environment: Development
+2024-12-22 17:22:33.639 +03:00 [INF] Content root path: D:\marketplace\microservices\CatalogService
+2024-12-22 17:22:33.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/index.html - null null
+2024-12-22 17:22:33.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/index.html - 200 null text/html;charset=utf-8 115.6364ms
+2024-12-22 17:22:33.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_vs/browserLink - null null
+2024-12-22 17:22:33.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-22 17:22:33.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_framework/aspnetcore-browser-refresh.js - 200 13773 application/javascript; charset=utf-8 8.4879ms
+2024-12-22 17:22:33.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.1379ms
+2024-12-22 17:22:34.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - null null
+2024-12-22 17:22:34.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.2373ms
+2024-12-22 17:22:49.071 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart - null 0
+2024-12-22 17:22:49.081 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 17:22:49.100 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:22:49.104 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:22:49.105 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart - 401 0 null 33.8584ms
+2024-12-22 17:23:35.696 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7121/api/Catalog - null null
+2024-12-22 17:23:35.701 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice)'
+2024-12-22 17:23:35.717 +03:00 [INF] Route matched with {action = "GetAllProducts", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 17:23:35.851 +03:00 [INF] Fetching all products.
+2024-12-22 17:23:36.591 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CatalogMicroservice.Model.Product, CatalogMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-22 17:23:36.597 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice) in 875.5996ms
+2024-12-22 17:23:36.599 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.GetAllProducts (CatalogMicroservice)'
+2024-12-22 17:23:36.605 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7121/api/Catalog - 200 null application/json; charset=utf-8 909.1194ms
+2024-12-22 17:23:59.861 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart?productId=205ae0e7-a6ca-429f-a004-d974f2ea00a7 - null 0
+2024-12-22 17:23:59.864 +03:00 [INF] No CORS policy found for the specified request.
+2024-12-22 17:23:59.866 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-12-22 17:23:59.868 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-22 17:23:59.869 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7121/api/Catalog/add-to-cart?productId=205ae0e7-a6ca-429f-a004-d974f2ea00a7 - 401 0 null 7.7918ms
+2024-12-22 17:24:15.866 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=205ae0e7-a6ca-429f-a004-d974f2ea00a7 - multipart/form-data 0
+2024-12-22 17:24:15.905 +03:00 [INF] Executing endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:24:15.913 +03:00 [INF] Route matched with {action = "AddToCart", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddToCart(System.Guid) on controller CatalogMicroservice.Controllers.CatalogController (CatalogMicroservice).
+2024-12-22 17:24:15.927 +03:00 [INF] Adding product "205ae0e7-a6ca-429f-a004-d974f2ea00a7" to cart "34a8b489-953f-4321-a6f0-091364c41b8e".
+2024-12-22 17:24:16.020 +03:00 [INF] Product "205ae0e7-a6ca-429f-a004-d974f2ea00a7" added to cart "34a8b489-953f-4321-a6f0-091364c41b8e" successfully.
+2024-12-22 17:24:16.023 +03:00 [INF] Executing OkObjectResult, writing value of type 'CatalogMicroservice.Model.Product'.
+2024-12-22 17:24:16.026 +03:00 [INF] Executed action CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice) in 110.0001ms
+2024-12-22 17:24:16.028 +03:00 [INF] Executed endpoint 'CatalogMicroservice.Controllers.CatalogController.AddToCart (CatalogMicroservice)'
+2024-12-22 17:24:16.029 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7121/api/Catalog/add-to-cart?productId=205ae0e7-a6ca-429f-a004-d974f2ea00a7 - 200 null application/json; charset=utf-8 162.9712ms

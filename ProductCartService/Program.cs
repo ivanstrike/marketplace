@@ -11,6 +11,7 @@ using UserMicroservice.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.// Add services to the container.
+builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -43,7 +44,6 @@ builder.Services.AddSingleton<RabbitMqConsumer>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddHostedService<RabbitMqConsumerBackgroundService>();
 
-builder.Services.AddDbContext<DbContextClass>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

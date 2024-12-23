@@ -30,16 +30,17 @@ namespace ProductCartMicroservice.RabbitMQ
 
             // Объявляем exchange для отправки сообщений
             _channel.ExchangeDeclare(exchange: "cart.exchange", type: ExchangeType.Topic, durable: true);
+            _channel.ExchangeDeclare(exchange: "user.exchange", type: ExchangeType.Topic, durable: true);
         }
 
-        public Task PublishMessageAsync(string routingKey, object message)
+        public Task PublishMessageAsync(string exchange, string routingKey, object message)
         {
             var properties = _channel.CreateBasicProperties();
             properties.Persistent = true;
 
             var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
-            _channel.BasicPublish(exchange: "cart.exchange", routingKey: routingKey, basicProperties: properties, body: body);
+            _channel.BasicPublish(exchange: exchange, routingKey: routingKey, basicProperties: properties, body: body);
             return Task.CompletedTask;
         }
 

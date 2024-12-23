@@ -13,6 +13,7 @@ D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\ApiGateway.csproj.CoreC
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\ApiGateway.MvcApplicationPartsAssemblyInfo.cache
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\ApiGateway.RazorAssemblyInfo.cache
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\ApiGateway.RazorAssemblyInfo.cs
+D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\ApiGateway.sourcelink.json
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\staticwebassets.build.json
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\staticwebassets.development.json
 D:\marketplace\microservices\ApiGateway\obj\Debug\net8.0\staticwebassets\msbuild.ApiGateway.Microsoft.AspNetCore.StaticWebAssets.props

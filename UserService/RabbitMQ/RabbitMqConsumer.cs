@@ -45,7 +45,49 @@ public class RabbitMqConsumer : IDisposable
         _channel.QueueDeclare(queue: "cart_created_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
         _channel.QueueBind(queue: "cart_created_queue", exchange: "user.exchange", routingKey: "cart.created");
 
-        
+        args = new Dictionary<string, object>
+        {
+            { "x-dead-letter-exchange", "dead_letter_exchange" },
+            { "x-dead-letter-routing-key", "product_added.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "product_added_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "product_added_queue", exchange: "user.exchange", routingKey: "product_added");
+
+        // Consumer for product_added
+        var productCreatedConsumer = new EventingBasicConsumer(_channel);
+        productCreatedConsumer.Received += async (model, ea) =>
+        {
+            try
+            {
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
+
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var productCreatedEvent = JsonSerializer.Deserialize<ProductCreatedEvent>(message);
+
+                    if (productCreatedEvent != null)
+                    {
+
+                        userService.CreateProduct(productCreatedEvent.CreatorId, productCreatedEvent.ProductId);
+
+                    }
+                }
+
+                // Подтверждение успешной обработки сообщения
+                _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing product.created message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+        };
+
+        _channel.BasicConsume(queue: "product_added_queue", autoAck: false, consumer: productCreatedConsumer);
+
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += async (model, ea) =>
         {

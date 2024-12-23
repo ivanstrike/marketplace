@@ -104,6 +104,15 @@ namespace UserMicroservice.Services
             return isPasswordValid ? user : null;
         }
 
-
+        public async Task<User?> CreateProduct(Guid creatortId, Guid productId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == creatortId);
+            if (user != null)
+            {
+                user.CreatedProductIds.Add(productId);
+                await _context.SaveChangesAsync();
+            }
+            return user;
+        }
     }
 }
