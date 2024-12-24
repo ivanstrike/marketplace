@@ -2,8 +2,7 @@
 {
     public class UserDeletedEvent
     {
-        public Guid UserId { get; set; }
-        public Guid ProdutCartId { get; set; }
+        public Guid CartId { get; set; }
 
     }
 }

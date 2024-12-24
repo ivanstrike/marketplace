@@ -35,13 +35,25 @@ namespace ProductCartMicroservice.RabbitMQ
 
         public Task PublishMessageAsync(string exchange, string routingKey, object message)
         {
-            var properties = _channel.CreateBasicProperties();
-            properties.Persistent = true;
+            try
+            {
+                var properties = _channel.CreateBasicProperties();
+                properties.Persistent = true;
 
-            var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
+                var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
-            _channel.BasicPublish(exchange: exchange, routingKey: routingKey, basicProperties: properties, body: body);
-            return Task.CompletedTask;
+                Console.WriteLine($"Publishing message to exchange: {exchange}, routingKey: {routingKey}, message: {message}");
+
+                _channel.BasicPublish(exchange: exchange, routingKey: routingKey, basicProperties: properties, body: body);
+
+                Console.WriteLine("Message published successfully.");
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error publishing message: {ex.Message}");
+                throw;
+            }
         }
 
         public void Dispose()

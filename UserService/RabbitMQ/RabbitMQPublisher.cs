@@ -28,14 +28,12 @@ namespace UserMicroservice.RabbitMQ
                 throw new InvalidOperationException("RabbitMQ connection is not open.");
             }
             _channel = _connection.CreateModel();
+            _channel.ExchangeDeclare(exchange: "user.exchange", type: ExchangeType.Topic, durable: true);
         }
 
-        public Task PublishMessageAsync(string queueName, object message)
+        public Task PublishMessageAsync(string routingKey, object message)
         {
             
-            _channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
-
-           
             var properties = _channel.CreateBasicProperties();
             properties.Persistent = true;
 
@@ -43,7 +41,7 @@ namespace UserMicroservice.RabbitMQ
             var body = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
 
         
-            _channel.BasicPublish(exchange: "user.exchange", routingKey: queueName, basicProperties: properties, body: body);
+            _channel.BasicPublish(exchange: "user.exchange", routingKey: routingKey, basicProperties: properties, body: body);
 
             return Task.CompletedTask;
         }

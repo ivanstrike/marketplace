@@ -43,8 +43,13 @@ namespace UserMicroservice.Services
 
             Guid _id = Guid.NewGuid();
             string _passwordHasher = BCrypt.Net.BCrypt.HashPassword(userdto.Password);
-            User user = new User(_id, userdto.Name, userdto.Email);
-            user.PasswordHash = _passwordHasher;
+            var user = new User
+            {
+                Id = _id,
+                Name = userdto.Name,
+                Email = userdto.Email,
+                PasswordHash = _passwordHasher,
+            };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -87,7 +92,7 @@ namespace UserMicroservice.Services
             await _context.SaveChangesAsync();
 
             // Отправить сообщение о удалении пользователя
-            await _publisher.PublishMessageAsync("user.deleted", new { UserId = id, CartID = user.ProductCartId });
+            await _publisher.PublishMessageAsync("user.deleted", new { CartId = user.ProductCartId });
 
             return true;
         }

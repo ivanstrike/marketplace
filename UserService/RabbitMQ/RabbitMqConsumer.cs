@@ -48,11 +48,11 @@ public class RabbitMqConsumer : IDisposable
         args = new Dictionary<string, object>
         {
             { "x-dead-letter-exchange", "dead_letter_exchange" },
-            { "x-dead-letter-routing-key", "product_added.dlx" }
+            { "x-dead-letter-routing-key", "product_created.dlx" }
         };
 
-        _channel.QueueDeclare(queue: "product_added_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
-        _channel.QueueBind(queue: "product_added_queue", exchange: "user.exchange", routingKey: "product_added");
+        _channel.QueueDeclare(queue: "product_created_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "product_created_queue", exchange: "user.exchange", routingKey: "product_created");
 
         // Consumer for product_added
         var productCreatedConsumer = new EventingBasicConsumer(_channel);
@@ -71,7 +71,7 @@ public class RabbitMqConsumer : IDisposable
                     if (productCreatedEvent != null)
                     {
 
-                        userService.CreateProduct(productCreatedEvent.CreatorId, productCreatedEvent.ProductId);
+                        await userService.CreateProduct(productCreatedEvent.CreatorId, productCreatedEvent.ProductId);
 
                     }
                 }
@@ -86,10 +86,10 @@ public class RabbitMqConsumer : IDisposable
             }
         };
 
-        _channel.BasicConsume(queue: "product_added_queue", autoAck: false, consumer: productCreatedConsumer);
+        _channel.BasicConsume(queue: "product_created_queue", autoAck: false, consumer: productCreatedConsumer);
 
-        var consumer = new EventingBasicConsumer(_channel);
-        consumer.Received += async (model, ea) =>
+        var cartCreatedConsumer = new EventingBasicConsumer(_channel);
+        cartCreatedConsumer.Received += async (model, ea) =>
         {
             try
             {
@@ -114,7 +114,7 @@ public class RabbitMqConsumer : IDisposable
 
         };
 
-        _channel.BasicConsume(queue: "cart_created_queue", autoAck: false, consumer: consumer);
+        _channel.BasicConsume(queue: "cart_created_queue", autoAck: false, consumer: cartCreatedConsumer);
     }
 
     public void Dispose()

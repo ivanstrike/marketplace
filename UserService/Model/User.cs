@@ -8,13 +8,6 @@
         public string PasswordHash { get; set; }
         public List<Guid> CreatedProductIds { get; set; } = new();
         public Guid? ProductCartId { get; set; } 
-
-      
-        public User(Guid id, string name, string email)
-        {
-            Id = id;
-            Name = name;
-            Email = email;
-        }
+        
     }
 }

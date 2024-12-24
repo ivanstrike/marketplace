@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a9dfc70ed0c74f2a18963937a0937f286a3ff0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daf49f437e5c5e799ea746fabc8ab220912860c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProductCartMicroservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

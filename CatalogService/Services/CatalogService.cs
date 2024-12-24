@@ -57,10 +57,10 @@ namespace CatalogMicroservice.Services
 
             var message = new
             {
-                UserId = creatorId,
+                CreatorId = creatorId,
                 ProductId = createdProduct.Id,
             };
-            await _publisher.PublishMessageAsync("user.exchnge", "product_added", message);
+            await _publisher.PublishMessageAsync("user.exchange", "product_created", message);
 
             return createdProduct;
         }

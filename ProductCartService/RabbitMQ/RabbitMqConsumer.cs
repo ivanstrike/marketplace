@@ -86,7 +86,7 @@ public class RabbitMqConsumer : IDisposable
                     if (cartItemAddedEvent != null)
                     {
 
-                        cartService.AddToCart(cartItemAddedEvent);
+                        await cartService.AddToCart(cartItemAddedEvent);
 
                     }
                 }
@@ -96,7 +96,7 @@ public class RabbitMqConsumer : IDisposable
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error processing user.created message: {ex.Message}");
+                Console.WriteLine($"Error processing cart.item_added message: {ex.Message}");
                 _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
             }
         };
@@ -135,7 +135,7 @@ public class RabbitMqConsumer : IDisposable
                             CartId = cart.Id
                         };
 
-                        rabbitMqPublisher.PublishMessageAsync("cart.created", cartCreatedEvent);
+                        await rabbitMqPublisher.PublishMessageAsync("cart.created", cartCreatedEvent);
                     }
                 }
 
@@ -168,7 +168,7 @@ public class RabbitMqConsumer : IDisposable
                     if (userDeletedEvent != null)
                     {
                         
-                        await cartService.DeleteCartAsync(userDeletedEvent.ProdutCartId);
+                        await cartService.DeleteCartAsync(userDeletedEvent.CartId);
                     }
                 }
 

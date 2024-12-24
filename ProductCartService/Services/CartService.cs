@@ -52,12 +52,6 @@ namespace ProductCartMicroservice.Services
                 throw new Exception($"Cart with ID {addedProduct.CartId} not found.");
             }
 
-            
-            if (cart.Items.Any(item => item.ProductId == addedProduct.ProductId))
-            {
-                throw new Exception("This product is already in the cart.");
-            }
-
             var newItem = new CartItem
             {
                 Id = Guid.NewGuid(),
