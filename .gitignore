@@ -1,18 +1,7 @@
-UserService/obj/
-UserService/logs/
-UserService/bin/
-UserService/Properties/
-
-ProductCartService/obj/
-ProductCartService/logs/
-ProductCartService/bin/
-ProductCartService/Properties/
-
-CatalogService/obj/
-CatalogService/logs/
-CatalogService/bin/
-CatalogService/Properties/
-
+*/obj/
+*/logs/
+*/bin/
+*/Properties/
 .vs/
 *.json
 

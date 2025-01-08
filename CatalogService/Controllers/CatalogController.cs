@@ -2,6 +2,7 @@
 using CatalogMicroservice.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace CatalogMicroservice.Controllers
 {
@@ -24,6 +25,15 @@ namespace CatalogMicroservice.Controllers
         {
             _logger.LogInformation("Fetching all products.");
             var products = await _catalogService.GetProductListAsync();
+            return Ok(products);
+        }
+
+        [HttpGet("by-name")]
+        [Authorize]
+        public async Task<IActionResult> GetProductsByName([FromQuery] string name)
+        {
+            var products = await _catalogService.GetProductsByNameAsync(name);
+            _logger.LogInformation("Fetched {Count} products with name containing '{Name}'.", products.Count(), name);
             return Ok(products);
         }
 

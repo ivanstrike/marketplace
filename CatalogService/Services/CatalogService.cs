@@ -24,6 +24,22 @@ namespace CatalogMicroservice.Services
             return await _productRepository.GetAllProductsAsync();
         }
 
+        public async Task<IEnumerable<Product>> GetProductsByNameAsync(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Product name cannot be null or empty.", nameof(name));
+            }
+
+            var products = await _productRepository.GetProductsByNameAsync(name);
+
+            if (!products.Any())
+            {
+                throw new KeyNotFoundException($"No products found with name containing '{name}'.");
+            }
+
+            return products;
+        }
         public async Task<Product?> GetProductByIdAsync(Guid productId)
         {
             var product = await _productRepository.GetProductByIdAsync(productId);

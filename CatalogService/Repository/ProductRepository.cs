@@ -42,6 +42,34 @@ namespace CatalogMicroservice.Repository
             return products;
         }
 
+        public async Task<IEnumerable<Product>> GetProductsByNameAsync(string name)
+        {
+            var cacheKey = $"ProductListByName_{name}";
+            var cachedProducts = await _cache.GetStringAsync(cacheKey);
+
+            if (cachedProducts != null)
+            {
+                return JsonSerializer.Deserialize<IEnumerable<Product>>(cachedProducts)!;
+            }
+
+            var products = await _context.Products
+                .Where(p => p.Name.Contains(name))
+                .ToListAsync();
+
+            if (products.Any())
+            {
+                var cacheEntryOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30)
+                };
+
+                await _cache.SetStringAsync(cacheKey, JsonSerializer.Serialize(products), cacheEntryOptions);
+            }
+
+            return products;
+        }
+
+
         public async Task<Product?> GetProductByIdAsync(Guid id)
         {
             var cacheKey = $"Product_{id}";
