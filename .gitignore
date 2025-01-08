@@ -13,3 +13,5 @@ CatalogService/logs/
 CatalogService/bin/
 CatalogService/Properties/
 
+*.json
+
