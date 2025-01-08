@@ -28,6 +28,7 @@ namespace ProductCartMicroservice.RabbitMQ
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
 
+            _channel.ConfirmSelect();
             // Объявляем exchange для отправки сообщений
             _channel.ExchangeDeclare(exchange: "cart.exchange", type: ExchangeType.Topic, durable: true);
             _channel.ExchangeDeclare(exchange: "user.exchange", type: ExchangeType.Topic, durable: true);
@@ -45,7 +46,10 @@ namespace ProductCartMicroservice.RabbitMQ
                 Console.WriteLine($"Publishing message to exchange: {exchange}, routingKey: {routingKey}, message: {message}");
 
                 _channel.BasicPublish(exchange: exchange, routingKey: routingKey, basicProperties: properties, body: body);
-
+                if (!_channel.WaitForConfirms(TimeSpan.FromSeconds(5)))
+                {
+                    throw new Exception("RabbitMQ did not confirm the message.");
+                }
                 Console.WriteLine("Message published successfully.");
                 return Task.CompletedTask;
             }

@@ -69,6 +69,51 @@ public class RabbitMqConsumer : IDisposable
         _channel.QueueDeclare(queue: "cart_item_added_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
         _channel.QueueBind(queue: "cart_item_added_queue", exchange: "cart.exchange", routingKey: "cart.item_added");
 
+
+        args = new Dictionary<string, object>
+        {
+            { "x-dead-letter-exchange", "dead_letter_exchange" },
+            { "x-dead-letter-routing-key", "product_deleted.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "product_deleted_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "product_deleted_queue", exchange: "cart.exchange", routingKey: "product_deleted");
+
+        // Consumer for product_deleted
+        var productDeletedConsumer = new EventingBasicConsumer(_channel);
+        productDeletedConsumer.Received += async (model, ea) =>
+        {
+            try
+            {
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var cartService = scope.ServiceProvider.GetRequiredService<ICartService>();
+
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var productDeletedEvent = JsonSerializer.Deserialize<ProductDeletedEvent>(message);
+
+                    if (productDeletedEvent != null)
+                    {
+
+                        await cartService.DeleteCartItemsByProductIdAsync(productDeletedEvent.ProductId);
+
+                    }
+                }
+
+                // Подтверждение успешной обработки сообщения
+                _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing cart.items_deleted message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+        };
+
+        _channel.BasicConsume(queue: "product_deleted_queue", autoAck: false, consumer: productDeletedConsumer);
+
+
         // Consumer for cart.item_added
         var cartItemAddedConsumer = new EventingBasicConsumer(_channel);
         cartItemAddedConsumer.Received += async (model, ea) =>
@@ -86,7 +131,7 @@ public class RabbitMqConsumer : IDisposable
                     if (cartItemAddedEvent != null)
                     {
 
-                        await cartService.AddToCart(cartItemAddedEvent);
+                        await cartService.AddToCartAsync(cartItemAddedEvent);
 
                     }
                 }
@@ -97,7 +142,7 @@ public class RabbitMqConsumer : IDisposable
             catch (Exception ex)
             {
                 Console.WriteLine($"Error processing cart.item_added message: {ex.Message}");
-                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: false);
             }
         };
 

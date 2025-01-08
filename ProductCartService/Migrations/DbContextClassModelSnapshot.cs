@@ -48,7 +48,7 @@ namespace ProductCartMicroservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("CartId")
+                    b.Property<Guid>("CartId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Name")
@@ -61,6 +61,9 @@ namespace ProductCartMicroservice.Migrations
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uuid");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
@@ -72,7 +75,9 @@ namespace ProductCartMicroservice.Migrations
                 {
                     b.HasOne("ProductCartMicroservice.Model.Cart", null)
                         .WithMany("Items")
-                        .HasForeignKey("CartId");
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProductCartMicroservice.Model.Cart", b =>

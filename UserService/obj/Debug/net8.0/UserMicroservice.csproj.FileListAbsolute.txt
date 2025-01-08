@@ -156,3 +156,6 @@ D:\marketplace\microservices\UserService\obj\Debug\net8.0\refint\UserMicroservic
 D:\marketplace\microservices\UserService\obj\Debug\net8.0\UserMicroservice.pdb
 D:\marketplace\microservices\UserService\obj\Debug\net8.0\UserMicroservice.genruntimeconfig.cache
 D:\marketplace\microservices\UserService\obj\Debug\net8.0\ref\UserMicroservice.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\marketplace\microservices\UserService\bin\Debug\net8.0\StackExchange.Redis.dll

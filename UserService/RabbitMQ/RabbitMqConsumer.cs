@@ -54,6 +54,49 @@ public class RabbitMqConsumer : IDisposable
         _channel.QueueDeclare(queue: "product_created_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
         _channel.QueueBind(queue: "product_created_queue", exchange: "user.exchange", routingKey: "product_created");
 
+        args = new Dictionary<string, object>
+        {
+            { "x-dead-letter-exchange", "dead_letter_exchange" },
+            { "x-dead-letter-routing-key", "product_deleted.dlx" }
+        };
+
+        _channel.QueueDeclare(queue: "product_deleted_queue", durable: true, exclusive: false, autoDelete: false, arguments: args);
+        _channel.QueueBind(queue: "product_deleted_queue", exchange: "user.exchange", routingKey: "product_deleted");
+
+        // Consumer for product_deleted
+        var productDeletedConsumer = new EventingBasicConsumer(_channel);
+        productDeletedConsumer.Received += async (model, ea) =>
+        {
+            try
+            {
+                using (var scope = _serviceProvider.CreateScope())
+                {
+                    var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
+
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var productDeletedEvent = JsonSerializer.Deserialize<ProductChangedEvent>(message);
+
+                    if (productDeletedEvent != null)
+                    {
+
+                        await userService.DeleteProduct(productDeletedEvent.CreatorId, productDeletedEvent.ProductId);
+
+                    }
+                }
+
+                // Подтверждение успешной обработки сообщения
+                _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing product_deleted message: {ex.Message}");
+                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+            }
+        };
+
+        _channel.BasicConsume(queue: "product_deleted_queue", autoAck: false, consumer: productDeletedConsumer);
+
         // Consumer for product_added
         var productCreatedConsumer = new EventingBasicConsumer(_channel);
         productCreatedConsumer.Received += async (model, ea) =>
@@ -66,7 +109,7 @@ public class RabbitMqConsumer : IDisposable
 
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-                    var productCreatedEvent = JsonSerializer.Deserialize<ProductCreatedEvent>(message);
+                    var productCreatedEvent = JsonSerializer.Deserialize<ProductChangedEvent>(message);
 
                     if (productCreatedEvent != null)
                     {
@@ -82,7 +125,7 @@ public class RabbitMqConsumer : IDisposable
             catch (Exception ex)
             {
                 Console.WriteLine($"Error processing product.created message: {ex.Message}");
-                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+                _channel.BasicReject(deliveryTag: ea.DeliveryTag, requeue: false);
             }
         };
 
@@ -109,7 +152,7 @@ public class RabbitMqConsumer : IDisposable
             catch (Exception ex)
             {
                 Console.WriteLine($"Error processing message: {ex.Message}");
-                _channel.BasicNack(deliveryTag: ea.DeliveryTag, multiple: false, requeue: true);
+                _channel.BasicReject(deliveryTag: ea.DeliveryTag, requeue: false);
             }
 
         };

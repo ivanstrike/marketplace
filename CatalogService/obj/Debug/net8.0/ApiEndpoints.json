@@ -64,13 +64,13 @@
   {
     "ContainingType": "CatalogMicroservice.Controllers.CatalogController",
     "Method": "DeleteProduct",
-    "RelativePath": "api/Catalog/{id}",
+    "RelativePath": "api/Catalog/{productId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "productId",
         "Type": "System.Guid",
         "IsRequired": true
       }

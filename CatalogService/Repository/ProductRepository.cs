@@ -69,9 +69,10 @@ namespace CatalogMicroservice.Repository
 
         public async Task<Product> CreateProductAsync(Product product)
         {
+            if (product == null) throw new ArgumentException("Product cannot be null.");
+
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
-
 
             const string cacheKey = "ProductList";
             await _cache.RemoveAsync(cacheKey);
@@ -79,18 +80,13 @@ namespace CatalogMicroservice.Repository
             return product;
         }
 
-
         public async Task<bool> DeleteProductAsync(Guid productId)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product == null)
-            {
-                return false;
-            }
+            if (product == null) throw new KeyNotFoundException($"Product with ID {productId} not found.");
 
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-
 
             var cacheKey = $"Product_{productId}";
             await _cache.RemoveAsync(cacheKey);
@@ -99,19 +95,19 @@ namespace CatalogMicroservice.Repository
             return true;
         }
 
-
         public async Task<Product?> UpdateProductAsync(Guid productId, UpdateProductDTO updatedProduct)
         {
-            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == productId);
-            if (product == null) return null;
+            if (updatedProduct == null) throw new ArgumentException("Updated product data cannot be null.");
 
-            product.Name = updatedProduct.Name;
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == productId);
+            if (product == null) throw new KeyNotFoundException($"Product with ID {productId} not found.");
+
+            product.Name = updatedProduct.Name ?? throw new ArgumentException("Product name cannot be null.");
             product.Description = updatedProduct.Description;
             product.Price = updatedProduct.Price;
             product.ImageUrl = updatedProduct.ImageUrl;
 
             await _context.SaveChangesAsync();
-
 
             var cacheKey = $"Product_{product.Id}";
             await _cache.SetStringAsync(
@@ -120,11 +116,9 @@ namespace CatalogMicroservice.Repository
                 new DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30) }
             );
 
-
             await _cache.RemoveAsync("ProductList");
 
             return product;
         }
     }
 }
-

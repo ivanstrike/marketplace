@@ -28,23 +28,18 @@ namespace UserMicroservice.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:guid}")]
         [Authorize]
         public async Task<ActionResult<User>> GetUserByIdAsync(Guid id)
         {
             _logger.LogInformation("Fetching user with ID {Id}", id);
-            var user = await _userService.GetUserByIdAsync(id);
-            if (user == null)
-            {
-                _logger.LogWarning("User with ID {Id} not found.", id);
-                return NotFound($"User with ID {id} not found.");
-            }
 
-            return Ok(user);
+            var user = await _userService.GetUserByIdAsync(id);
+            return Ok(user); 
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> AddUserAsync([FromBody] CreateUserDTO user)
+        public async Task<ActionResult<User>> AddUserAsync([FromForm] CreateUserDTO user)
         {
             if (!ModelState.IsValid)
             {
@@ -55,39 +50,36 @@ namespace UserMicroservice.Controllers
             _logger.LogInformation("Creating a new user with email {Email}", user.Email);
             var createdUser = await _userService.CreateUserAsync(user);
 
-            _logger.LogDebug("Created user with ID {Id}", createdUser.Id);
+            _logger.LogInformation("Created user with ID {Id}", createdUser.Id);
 
             var url = Url.Action(nameof(GetUserByIdAsync), "User", new { id = createdUser.Id }, Request.Scheme);
             return Created(url, createdUser);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:guid}")]
         [Authorize]
         public async Task<ActionResult<User>> UpdateUserAsync(Guid id, [FromBody] UpdateUserDTO updatedUser)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            _logger.LogInformation("Updating user with ID {Id}", id);
             var editedUser = await _userService.UpdateUserAsync(id, updatedUser);
-            if (editedUser == null)
-                return NotFound($"User with ID {id} not found.");
-
             return Ok(editedUser);
         }
 
-        // Удаление пользователя
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:guid}")]
         [Authorize]
         public async Task<ActionResult> DeleteUserAsync(Guid id)
         {
-            _logger.LogInformation("Deleting user with ID {Id}", id);
-            var deleted = await _userService.DeleteUserAsync(id);
-            if (!deleted)
-            {
-                _logger.LogWarning("User with ID {Id} not found.", id);
-                throw new KeyNotFoundException($"User with ID {id} not found.");
-            }
+            var token = Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized("Token is required.");
+            }
+            _logger.LogInformation("Deleting user with ID {Id}", id);
+            await _userService.DeleteUserAsync(id, token);
             return NoContent();
         }
     }

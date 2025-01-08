@@ -25,7 +25,7 @@ namespace UserMicroservice.Controllers
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] UserLoginDTO loginDto)
+        public async Task<IActionResult> Login([FromForm] UserLoginDTO loginDto)
         {
 
             var user = await _userService.ValidateUser(loginDto);

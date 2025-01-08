@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductCartMicroservice.Model;
 using ProductCartMicroservice.Services;
 
@@ -17,132 +18,83 @@ namespace ProductCartMicroservice.Controllers
             _logger = logger;
         }
 
-        // Получение всех корзин
+        
         [HttpGet("list")]
         public async Task<ActionResult<IEnumerable<Cart>>> GetCartsAsync()
         {
-            try
-            {
-                _logger.LogInformation("Fetching all carts.");
-                var carts = await _cartService.GetCartListAsync();
-                return Ok(carts);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching carts.");
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+            _logger.LogInformation("Fetching all carts.");
+            var carts = await _cartService.GetCartListAsync();
+            return Ok(carts);
         }
 
-        // Получение корзины по ID
+        
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Cart>> GetCartByIdAsync(Guid id)
         {
-            try
-            {
-                _logger.LogInformation("Fetching cart with ID {Id}", id);
-                var cart = await _cartService.GetCartByIdAsync(id);
-                if (cart == null)
-                {
-                    _logger.LogWarning("Cart with ID {Id} not found.", id);
-                    return NotFound(new { message = $"Cart with ID {id} not found." });
-                }
-
-                return Ok(cart);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching cart with ID {Id}", id);
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+            _logger.LogInformation("Fetching cart with ID {Id}", id);
+            var cart = await _cartService.GetCartByIdAsync(id);
+            return Ok(cart);
         }
 
-        // Получение корзины по UserId
+        
+        [Authorize]
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<Cart>> GetCartByUserIdAsync(Guid userId)
         {
-            try
-            {
-                _logger.LogInformation("Fetching cart for user with ID {UserId}", userId);
-                var cart = await _cartService.GetCartByUserIdAsync(userId);
-                if (cart == null)
-                {
-                    _logger.LogWarning("Cart for user with ID {UserId} not found.", userId);
-                    return NotFound(new { message = $"Cart for user with ID {userId} not found." });
-                }
-
-                return Ok(cart);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching cart for user with ID {UserId}", userId);
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+            _logger.LogInformation("Fetching cart for user with ID {UserId}", userId);
+            var cart = await _cartService.GetCartByUserIdAsync(userId);
+            return Ok(cart);
         }
 
-        // Создание корзины
+        
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Cart>> CreateCartAsync([FromBody] Cart cart)
         {
-            try
-            {
-                _logger.LogInformation("Creating a new cart for user with ID {UserId}", cart.UserId);
-                var createdCart = await _cartService.CreateCartAsync(cart);
-                return CreatedAtAction(nameof(GetCartByIdAsync), new { id = createdCart.Id }, createdCart);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while creating a new cart.");
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+            _logger.LogInformation("Creating a new cart for user with ID {UserId}", cart.UserId);
+            var createdCart = await _cartService.CreateCartAsync(cart);
+            return CreatedAtAction(nameof(GetCartByIdAsync), new { id = createdCart.Id }, createdCart);
+        }
+
+       
+        [Authorize]
+        [HttpDelete("items/{cartItemId}/decrease")]
+        public async Task<IActionResult> DecreaseCartItemQuantityAsync(Guid cartItemId)
+        {
+            _logger.LogInformation("Decreasing quantity of CartItem with ID {CartItemId}", cartItemId);
+            await _cartService.DecreaseQuantityAsync(cartItemId);
+            return NoContent();
         }
 
      
-
-        // Удаление корзины
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteCartAsync(Guid id)
+        [Authorize]
+        [HttpDelete("items/{cartItemId}")]
+        public async Task<IActionResult> DeleteCartItemAsync(Guid cartItemId)
         {
-            try
-            {
-                _logger.LogInformation("Deleting cart with ID {Id}", id);
-                var result = await _cartService.DeleteCartAsync(id);
-                if (!result)
-                {
-                    _logger.LogWarning("Cart with ID {Id} not found.", id);
-                    return NotFound(new { message = $"Cart with ID {id} not found." });
-                }
-
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while deleting cart with ID {Id}", id);
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+            _logger.LogInformation("Deleting CartItem with ID {CartItemId}", cartItemId);
+            await _cartService.DeleteFromCartAsync(cartItemId);
+            return NoContent();
         }
 
-        // Очистка корзины
-        [HttpPost("{id}/clear")]
-        public async Task<ActionResult> ClearCartAsync(Guid id)
+   
+        [Authorize]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCartAsync(Guid id)
         {
-            try
-            {
-                _logger.LogInformation("Clearing cart with ID {Id}", id);
-                var result = await _cartService.ClearCartAsync(id);
-                if (!result)
-                {
-                    _logger.LogWarning("Cart with ID {Id} not found.", id);
-                    return NotFound(new { message = $"Cart with ID {id} not found." });
-                }
+            _logger.LogInformation("Deleting Cart with ID {CartId}", id);
+            await _cartService.DeleteCartAsync(id);
+            return NoContent();
+        }
 
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while clearing cart with ID {Id}", id);
-                return StatusCode(500, new { message = "Internal server error." });
-            }
+  
+        [Authorize]
+        [HttpPost("{id}/clear")]
+        public async Task<IActionResult> ClearCartAsync(Guid id)
+        {
+            _logger.LogInformation("Clearing cart with ID {Id}", id);
+            await _cartService.ClearCartAsync(id);
+            return NoContent();
         }
     }
 }

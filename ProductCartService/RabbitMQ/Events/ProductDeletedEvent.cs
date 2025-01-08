@@ -1,0 +1,8 @@
+﻿namespace ProductCartMicroservice.RabbitMQ.Events
+{
+    public class ProductDeletedEvent
+    {
+        public Guid CreatorId { get; set; }
+        public Guid ProductId { get; set; }
+    }
+}

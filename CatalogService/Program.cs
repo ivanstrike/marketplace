@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using ProductCartMicroservice.RabbitMQ;
 using Serilog;
+using System.Net;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,32 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+    options.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            context.Response.ContentType = "application/json";
+            var result = new
+            {
+                context.Response.StatusCode,
+                Message = "Unauthorized"
+            };
+            return context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(result));
+        },
+        OnChallenge = context =>
+        {
+            context.HandleResponse();
+            context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            context.Response.ContentType = "application/json";
+            var result = new
+            {
+                context.Response.StatusCode,
+                Message = "You are not authorized"
+            };
+            return context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(result));
+        }
     };
 });
 
@@ -75,6 +102,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseMiddleware<JwtBlacklistMiddleware>();
+
 app.UseHttpsRedirection();
 app.UseCors();
 

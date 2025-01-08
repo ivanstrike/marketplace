@@ -1,10 +1,7 @@
 ﻿using CatalogMicroservice.Data;
 using CatalogMicroservice.Model;
 using CatalogMicroservice.RabbitMQ.Events;
-
-// using CatalogMicroservice.RabbitMQ;
 using CatalogMicroservice.Repository;
-using Microsoft.EntityFrameworkCore;
 using ProductCartMicroservice.RabbitMQ;
 
 namespace CatalogMicroservice.Services
@@ -29,24 +26,28 @@ namespace CatalogMicroservice.Services
 
         public async Task<Product?> GetProductByIdAsync(Guid productId)
         {
-            return await _productRepository.GetProductByIdAsync(productId);
+            var product = await _productRepository.GetProductByIdAsync(productId);
+            if (product == null)
+                throw new KeyNotFoundException($"Product with ID {productId} not found.");
+
+            return product;
         }
 
         public async Task<Product> CreateProductAsync(Guid creatorId, ProductDTO productDto)
         {
-            Guid productId = Guid.NewGuid();
+            if (productDto == null)
+                throw new ArgumentException("ProductDTO cannot be null.");
 
             // Загружаем изображение в Minio
-            string imageUrl = await _minioService.UploadFileAsync(productDto.ImageFile);
-           
+            var imageUrl = await _minioService.UploadFileAsync(productDto.ImageFile);
             if (string.IsNullOrEmpty(imageUrl))
                 throw new InvalidOperationException("Image upload failed.");
 
             // Создаем продукт
-            Product newProduct = new Product
+            var newProduct = new Product
             {
-                Id = productId,
-                Name = productDto.Name,
+                Id = Guid.NewGuid(),
+                Name = productDto.Name ?? throw new ArgumentException("Product name cannot be null."),
                 Description = productDto.Description,
                 Price = productDto.Price,
                 ImageUrl = imageUrl,
@@ -55,6 +56,7 @@ namespace CatalogMicroservice.Services
 
             var createdProduct = await _productRepository.CreateProductAsync(newProduct);
 
+            // Публикуем событие
             var message = new
             {
                 CreatorId = creatorId,
@@ -64,35 +66,53 @@ namespace CatalogMicroservice.Services
 
             return createdProduct;
         }
+
         public async Task<Product> AddToCartAsync(Guid cartId, Guid productId)
         {
-            var product = await _productRepository.GetProductByIdAsync(productId);
-            await _publisher.PublishMessageAsync("cart.exchange", "cart.item_added", new ProductAddedToCartEvent
+            var product = await GetProductByIdAsync(productId);
+            try
             {
-                CartId = cartId,
-                ProductId = product.Id,
-                Name = product.Name,
-                Price = product.Price
-            });
-            return product;
-        }
-        public async Task<bool> DeleteProductAsync(Guid productId)
-        {
-            var product = await _productRepository.GetProductByIdAsync(productId);
-            if (product == null)
-            {
-                return false;
+                await _publisher.PublishMessageAsync("cart.exchange", "cart.item_added", new ProductAddedToCartEvent
+                {
+                    CartId = cartId,
+                    ProductId = product.Id,
+                    Name = product.Name,
+                    Price = product.Price
+                });
+                return product;
             }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
+        public async Task<bool> DeleteProductAsync(Guid creatorId, Guid productId)
+        {
+            var product = await GetProductByIdAsync(productId);
+
+            // Удаляем файл из Minio
             await _minioService.DeleteFileAsync(product.ImageUrl);
 
+            // Публикуем события
+            var deleteEvent = new ProductDeletedEvent
+            {
+                CreatorId = creatorId,
+                ProductId = product.Id
+            };
+            await _publisher.PublishMessageAsync("cart.exchange", "product_deleted", deleteEvent);
+            await _publisher.PublishMessageAsync("user.exchange", "product_deleted", deleteEvent);
+
+            // Удаляем продукт
             return await _productRepository.DeleteProductAsync(productId);
         }
 
         public async Task<Product?> UpdateProductAsync(Guid productId, ProductDTO updatedProduct)
         {
-            var product = await _productRepository.GetProductByIdAsync(productId);
-            if (product == null) return null;
+            if (updatedProduct == null)
+                throw new ArgumentException("Updated product data cannot be null.");
+
+            var product = await GetProductByIdAsync(productId);
 
             string newImageUrl = await _minioService.UploadFileAsync(updatedProduct.ImageFile);
             if (!string.IsNullOrEmpty(newImageUrl))
@@ -102,7 +122,7 @@ namespace CatalogMicroservice.Services
 
             var productForUpdate = new UpdateProductDTO
             {
-                Name = updatedProduct.Name,
+                Name = updatedProduct.Name ?? throw new ArgumentException("Product name cannot be null."),
                 Description = updatedProduct.Description,
                 Price = updatedProduct.Price,
                 ImageUrl = newImageUrl,

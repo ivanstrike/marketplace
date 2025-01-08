@@ -85,6 +85,38 @@
   },
   {
     "ContainingType": "ProductCartMicroservice.Controllers.CartController",
+    "Method": "DeleteCartItemAsync",
+    "RelativePath": "api/Cart/items/{cartItemId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductCartMicroservice.Controllers.CartController",
+    "Method": "DecreaseCartItemQuantityAsync",
+    "RelativePath": "api/Cart/items/{cartItemId}/decrease",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductCartMicroservice.Controllers.CartController",
     "Method": "GetCartsAsync",
     "RelativePath": "api/Cart/list",
     "HttpMethod": "GET",

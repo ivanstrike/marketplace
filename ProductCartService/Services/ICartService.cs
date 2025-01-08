@@ -11,7 +11,13 @@ namespace ProductCartMicroservice.Services
     
         Task<Cart> CreateCartAsync(Cart cart);
 
-        Task<CartItem> AddToCart(CartItemAddedEvent addedProduct);
+        Task<CartItem> AddToCartAsync(CartItemAddedEvent addedProduct);
+
+        Task<bool> DeleteFromCartAsync(Guid cartItemId);
+
+        Task<bool> DecreaseQuantityAsync(Guid cartItemId);
+
+        Task DeleteCartItemsByProductIdAsync(Guid productId);
 
         Task<bool> DeleteCartAsync(Guid id);
  

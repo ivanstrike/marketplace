@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.EntityFrameworkCore;
 using UserMicroservice.Model;
 using UserMicroservice.Data;
 using UserMicroservice.RabbitMQ;
-using UserMicroservice.Model;
-using Microsoft.AspNetCore.Identity;
-using BCrypt.Net;
+using UserMicroservice.RabbitMQ.Events;
+using Microsoft.Extensions.Caching.Distributed;
+
 
 namespace UserMicroservice.Services
 {
@@ -16,108 +13,220 @@ namespace UserMicroservice.Services
     {
         private readonly DbContextClass _context;
         private readonly RabbitMqPublisher _publisher;
+        private readonly IDistributedCache _cache;
 
-        public UserService(DbContextClass context, RabbitMqPublisher publisher)
+        public UserService(DbContextClass context, RabbitMqPublisher publisher, IDistributedCache cache)
         {
             _context = context;
             _publisher = publisher;
+            _cache = cache;
         }
 
         public async Task<IEnumerable<User>> GetUserListAsync()
         {
-            return await _context.Users.ToListAsync();
+            try
+            {
+                return await _context.Users.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to fetch the list of users.", ex);
+            }
         }
 
         public async Task<User?> GetUserByIdAsync(Guid id)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {id} not found.");
+                }
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Error retrieving user with ID {id}.", ex);
+            }
         }
 
         public async Task<User> CreateUserAsync(CreateUserDTO userdto)
         {
-            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == userdto.Email);
-            if (existingUser != null)
+            try
             {
-                throw new InvalidOperationException("Пользователь с таким email уже существует.");
+                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == userdto.Email);
+                if (existingUser != null)
+                {
+                    throw new InvalidOperationException("User with the specified email already exists.");
+                }
+
+                var user = new User
+                {
+                    Id = Guid.NewGuid(),
+                    Name = userdto.Name,
+                    Email = userdto.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(userdto.Password)
+                };
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                // Publish a message about user creation
+                await _publisher.PublishMessageAsync("user.created", new { UserId = user.Id });
+
+                return user;
             }
-
-            Guid _id = Guid.NewGuid();
-            string _passwordHasher = BCrypt.Net.BCrypt.HashPassword(userdto.Password);
-            var user = new User
+            catch (InvalidOperationException ex)
             {
-                Id = _id,
-                Name = userdto.Name,
-                Email = userdto.Email,
-                PasswordHash = _passwordHasher,
-            };
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            // Отправить сообщение о создании пользователя
-            await _publisher.PublishMessageAsync("user.created", new { UserId = user.Id } );
-            
-
-            return user;
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to create a new user.", ex);
+            }
         }
 
         public async Task<User?> UpdateUserAsync(Guid id, UpdateUserDTO updatedUser)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (user == null) return null;
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {id} not found.");
+                }
 
-            user.Name = updatedUser.Name;
-            user.Email = updatedUser.Email;
+                user.Name = updatedUser.Name;
+                user.Email = updatedUser.Email;
 
-            await _context.SaveChangesAsync();
-            return user;
+                await _context.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to update user with ID {id}.", ex);
+            }
         }
 
         public async Task<User?> UpdateProductCartIdAsync(Guid userId, Guid productcartId)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            if (user == null) return null;
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {userId} not found.");
+                }
 
-            user.ProductCartId = productcartId;
-          
-            await _context.SaveChangesAsync();
-            return user;
+                user.ProductCartId = productcartId;
+                await _context.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to update product cart ID for user with ID {userId}.", ex);
+            }
         }
 
-        public async Task<bool> DeleteUserAsync(Guid id)
+        public async Task<bool> DeleteUserAsync(Guid id, string jwtToken)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (user == null) return false;
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {id} not found.");
+                }
 
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+                if (string.IsNullOrEmpty(jwtToken))
+                {
+                    throw new ArgumentException("Token cannot be null or empty", nameof(jwtToken));
+                }
 
-            // Отправить сообщение о удалении пользователя
-            await _publisher.PublishMessageAsync("user.deleted", new { CartId = user.ProductCartId });
+                await _cache.SetStringAsync(jwtToken, "blacklisted", new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1)
+                });
+                // Publish a message about user deletion
+                await _publisher.PublishMessageAsync("user.deleted", new UserDeletedEvent 
+                {
+                    CartId = user.ProductCartId, 
+                    JwtToken = jwtToken 
+                });
 
-            return true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to delete user with ID {id}.", ex);
+            }
         }
 
         public async Task<User> ValidateUser(UserLoginDTO loginDto)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDto.Email);
-            if (user == null)
+            try
             {
-                return null;
-            }
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDto.Email);
+                if (user == null)
+                {
+                    throw new UnauthorizedAccessException("Invalid email or password.");
+                }
 
-            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash);
-            return isPasswordValid ? user : null;
+                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash);
+                if (!isPasswordValid)
+                {
+                    throw new UnauthorizedAccessException("Invalid email or password.");
+                }
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Failed to validate user credentials.", ex);
+            }
         }
 
-        public async Task<User?> CreateProduct(Guid creatortId, Guid productId)
+        public async Task<User?> CreateProduct(Guid creatorId, Guid productId)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == creatortId);
-            if (user != null)
+            try
             {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == creatorId);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {creatorId} not found.");
+                }
+
                 user.CreatedProductIds.Add(productId);
                 await _context.SaveChangesAsync();
+                return user;
             }
-            return user;
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to add product ID {productId} for user {creatorId}.", ex);
+            }
+        }
+
+        public async Task<User?> DeleteProduct(Guid creatorId, Guid productId)
+        {
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == creatorId);
+                if (user == null)
+                {
+                    throw new KeyNotFoundException($"User with ID {creatorId} not found.");
+                }
+
+                user.CreatedProductIds.Remove(productId);
+                await _context.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to remove product ID {productId} for user {creatorId}.", ex);
+            }
         }
     }
 }
