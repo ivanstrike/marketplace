@@ -1,3 +1,5 @@
-/UserService/logs/
-/ProductCartService/logs/
-/CatalogtService/logs/
+obj/
+logs/
+bin/
+Properties/
+*.json
